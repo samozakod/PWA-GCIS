@@ -1,20 +1,74 @@
 <ion-tabs>
 
   <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1" href="/tabs/tab1">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Tab 1</ion-label>
+
+   <ion-tab-button tab="Home" href="/home">
+    <ion-icon aria-hidden="true" name="home-sharp"></ion-icon>
+    <ion-label>Home</ion-label>
+  </ion-tab-button>
+  
+    <ion-tab-button tab="Explore" href="/tabs/tab1">
+      <ion-icon aria-hidden="true" name="map-sharp"></ion-icon>
+      <ion-label>Explore</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab2" href="/tabs/tab2">
-      <ion-icon aria-hidden="true" name="ellipse"></ion-icon>
-      <ion-label>Tab 2</ion-label>
+    <ion-tab-button tab="Enjoy" href="/tabs/tab2">
+      <ion-icon aria-hidden="true" name="happy-sharp"></ion-icon>
+      <ion-label>Enjoy</ion-label>
     </ion-tab-button>
 
-    <ion-tab-button tab="tab3" href="/tabs/tab3">
-      <ion-icon aria-hidden="true" name="square"></ion-icon>
-      <ion-label>Tab 3</ion-label>
+    <ion-tab-button tab="Help" href="/tabs/tab3">
+      <ion-icon aria-hidden="true" name="help-sharp"></ion-icon>
+      <ion-label>Get help</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 
+
+
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Options</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list lines="inset">
+  <ion-item>
+   <ion-button id="open-modal" expand="block">Accessibility</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-select label="Language" label-placement="floating">
+      <ion-select-option value="english">English</ion-select-option>
+      <ion-select-option value="spanish">Spanish</ion-select-option>
+      <ion-select-option value="catalan">Catalan</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+   <ion-toggle>Dark Mode</ion-toggle>
+  </ion-item>
+
+  <ion-item>
+    <ion-button id="about" expand="block"> <ion-icon aria-hidden="true" name="information-circle-sharp"></ion-icon></ion-button>
+    About Us<ion-alert
+  trigger="about"
+  header="Info"
+  message="Lorem Ipsum"
+  ></ion-alert>
+  </ion-item>
+
+</ion-list>
+</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+</div>
+
 </ion-tabs>
+
