@@ -1,0 +1,52 @@
+
+
+.welcome-text {
+  text-align: center;
+  padding: 16px;
+  font-size: 1.4rem;
+}
+
+.info-box {
+  text-align: center;
+  padding: 16px;
+  font-size: 1.1rem;
+}
+
+.content-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 16px;
+  gap: 20px;
+}
+
+.iframe-wrapper {
+  flex: 1 1 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.iframe-box {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #f8f8f8;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 640px;
+}
+
+.insta-card {
+  flex: 1 1 300px;
+  max-width: 320px;
+}
+
+.fab-active {
+  --background: #00ccb2;
+  --background-activated: #b7f399;
+  --background-hover: #a3e681;
+  transform: scale(1.1);
+}

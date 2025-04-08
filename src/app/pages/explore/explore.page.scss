@@ -1,0 +1,20 @@
+ion-col {
+  background: linear-gradient(135deg, #ff6f61, #ffcc67);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ffffff;
+}
+
+ion-col img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+ion-row {
+  margin: 10px 0;
+}
+

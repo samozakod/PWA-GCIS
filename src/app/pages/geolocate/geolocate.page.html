@@ -1,0 +1,38 @@
+<ion-content [fullscreen]="false">
+Welcome! (Placeholder)
+
+
+	<div id = "meteocat" >
+			 <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button>
+      <ion-icon name="chevron-forward-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button>
+        <ion-icon name="calendar-number-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="stats-chart-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="rainy-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="warning-sharp"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+	<iframe src="https://static-m.meteo.cat/ginys/municipal8d?location=170950&language=en&color=017E6E&tempFormat=ºC&target=_blank" title="8-day local weather forecast" frameborder="0" style="border: 0" scrolling="no" width="520" height="218"> aaa</iframe>
+
+	<iframe src="https://static-m.meteo.cat/ginys/municipal72h?location=170950&language=en&color=017E6E&tempFormat=ºC&windSpeedFormat=km/h&mainChart=estCel&secondaryChart=true&target=_blank" title="72-hour local weather forecast" frameborder="0" style="border: 0" scrolling="no" width="640" height="350"></iframe>
+
+	<iframe src="https://static-m.meteo.cat/ginys/mapaRadar?language=en&color=017E6E&target=_blank" title="Latest radar image" frameborder="0" style="border:0" scrolling="no" width="396" height="412"></iframe>
+
+	<iframe src="https://static-m.meteo.cat/ginys/mapaAvisos?language=en&color=<iframe&target=_blank" title="Warnings Map" frameborder="0" style="border:0" scrolling="no" width="297" height="525"></iframe>
+
+	</div>
+
+
+</ion-content>
+
