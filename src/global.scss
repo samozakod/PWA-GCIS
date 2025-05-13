@@ -36,3 +36,16 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /* @import "@ionic/angular/css/palettes/dark.system.css"; */
 
+ion-modal.fullscreen-modal {
+  height: 100% !important;
+  --height: 100% !important;
+}
+
+.fullscreen-modal {
+  --height: 100% !important;
+  --width: 100% !important;
+  --border-radius: 0 !important;
+  --max-height: 100% !important;
+  --max-width: 100% !important;
+  --overflow: hidden;
+}

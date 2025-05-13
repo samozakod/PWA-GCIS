@@ -9,7 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MapModalComponent } from 'src/app/components/map-modal/map-modal.component';
 
 @NgModule({
   declarations: [AppComponent],

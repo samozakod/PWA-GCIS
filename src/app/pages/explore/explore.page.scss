@@ -1,20 +1,44 @@
-ion-col {
-  background: linear-gradient(135deg, #ff6f61, #ffcc67);
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid #ffffff;
+:host {
+  --ion-color-primary: #017E6E; // overrides default Ionic "primary" color
 }
 
-ion-col img {
+.explore-content {
+  --background: #f8f8f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.explore-container {
   width: 100%;
-  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  text-align: center;
 }
 
-ion-row {
-  margin: 10px 0;
+.explore-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #017E6E;
 }
+
+ion-col {
+  padding: 8px;
+}
+
+ion-button {
+  white-space: normal !important;  
+  height: auto !important;         
+  min-height: 70px;                
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;                 
+  padding: 12px;
+  line-height: 1.4;
+}
+
 

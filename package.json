@@ -30,6 +30,8 @@
     "@ionic/storage-angular": "^4.0.0",
     "ionicons": "^7.0.0",
     "leaflet": "^1.9.4",
+    "leaflet-ant-path": "^1.3.0",
+    "leaflet-providers": "^2.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
@@ -47,6 +49,7 @@
     "@capacitor/cli": "7.0.1",
     "@ionic/angular-toolkit": "^12.0.0",
     "@types/jasmine": "~5.1.0",
+    "@types/leaflet-providers": "^1.2.4",
     "@typescript-eslint/eslint-plugin": "^8.18.0",
     "@typescript-eslint/parser": "^8.18.0",
     "eslint": "^9.16.0",
