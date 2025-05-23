@@ -1,0 +1,224 @@
+{
+  "categories": [
+        {
+      "title": "Food and Drinks",
+      "subtitle": "Discover Lloret's diverse gastronomy and beverage offers",
+      "items": [
+        {
+          "title": "Bar Restaurant Las Regiones",
+          "image": "assets/images/regiones.jpg",
+          "shortDescription": "In need of a hearty meal? Or maybe a quick expresso? Las Regiones meets both needs!",
+          "longDescription": "Come taste traditional Spanish meals. From the world famous tapas and the refreshing sangria, to some local treats such as crema catalana or bunyols. You are sure to find something you like, immersed at all times in a friendly atmosphere",
+          "location": " Av. de les Regions, 12",
+          "url": "https://www.lasregiones.net/"
+        },
+        {
+          "title": "Beach Döner Kebab",
+          "image": "assets/images/kebab.jpg",
+          "shortDescription": "Come try a selection of Eastern delicacies",
+          "longDescription": "A lovely place by the main beach, featuring many famous dishes hailing from the MENA region, India and Pakistan",
+          "location": "Passeig d'Agustí Font, 3",
+          "url": "https://glovoapp.com/es/es/lloret-de-mar/beach-doner-kebab-lloret-del-mar/"
+        },
+        {
+          "title": "Cocktail Bar Cala Banys",
+          "image": "assets/images/banys.jpg",
+          "shortDescription": "Enjoy your cocktail surrounded by the majestic Mediterranean",
+          "longDescription": "Cala Banys is a small cove near Lloret's central beach. This inlet remains hidden to most, since it is not as easily accessible as the main beaches. Whoever persists and reaches it will be awarded with magnificent vistas and a relaxed atmosphere",
+          "location": "Cala Banys",
+          "url": "https://www.visitacostabrava.com/es/lloret-de-mar/cocktail-bar-cala-banys"
+        },
+        {
+          "title": "La Vaca Echada",
+          "image": "assets/images/vaca.jpg",
+          "shortDescription": "An Argentinian Steakhouse located in the heart of Lloret's Historical Center",
+          "longDescription": "This restaurant specializes in Argentina's most renowned culinary product: the Argentine beef. Charcoal-grilled with smoky undertones, this South American wonder is sure to win the hearts (and palates!) of the meat lovers out there",
+          "location": "Carrer Sant Romà, 9",
+          "url": "https://guiacat.cat/es/restaurante/vaca-echada-lloret-mar"
+        },
+        {
+          "title": "Pizzeria Anna",
+          "image": "assets/images/pizza.jpg",
+          "shortDescription": "Taste the world's favourite fast food, reimagined through Lloret's recipes",
+          "longDescription": "A quaint pizzeria near many of the town's hotels. The old adage doesn't apply to this place - it has both quality and quantity, especially when it comes to all the delicious types of homemade pizza!",
+          "location": "Carrer de Josep Anselm Clavé, 10",
+          "url": "https://glovoapp.com/es/es/lloret-de-mar/pizzer-a-l-anna-lloret-del-mar/"
+        },
+        {
+          "title": "Restaurant El Reno",
+          "image": "assets/images/reno.jpg",
+          "shortDescription": "In the mood for some fine dining? Visit El Reno",
+          "longDescription": "A classy restaurant located on the road to the town of Blanes. Offers a large selection of high quality dishes, spread throughout several thematic courses. Booking required",
+          "location": " Camí de Lloret",
+          "url": "https://elrenolloret.com/"
+        },
+        {
+          "title": "Tequila 85",
+          "image": "assets/images/tequila.jpg",
+          "shortDescription": "A cozy bar with a great selection of liquors",
+          "longDescription": "Do you fancy a new experience for grown-ups? Then visit Tequila 85, a bar whose main objective is bringing great tastes and wonderful experiences to its visitors",
+          "location": "Carrer de Josep de Togores, 17",
+          "url": "https://gastroranking.es/r/tequila-85-shisha-bar_242730/"
+        }
+
+
+        
+      ]
+    },
+    {
+      "title": "Live Music and Party Venues",
+      "subtitle": "Move your body! Come downtown and start grooving",
+      "items": [
+        {
+          "title": "Clon Festival",
+          "image": "assets/images/clon.jpg",
+          "shortDescription": "Relive the classics in a unique stage set by the sea",
+          "longDescription": "Let us pay tribute to some of music's finest. A wondrous experience where you will travel back in time to a more carefree time",
+          "date": "July 1st – July 5th",
+          "location": "La Roca d'en Maig",
+          "url": "https://saintjohnseveexample.com"
+        },
+        {
+          "title": "Grand Cafè Latino",
+          "image": "assets/images/latino.jpg",
+          "shortDescription": "The home of Southern rhythms",
+          "longDescription": "Right in the heart of Lloret, you are more than welcome to visit and let the music guide you through the dance floor",
+          "location": "Rambla de Romà Barnés, 10",
+          "url": "https://somcostabrava.com/es/entretenimiento/grand-cafe-latino"
+        },
+        {
+          "title": "Lloret Outdoor Summer Festival",
+          "image": "assets/images/outdoor.jpg",
+          "shortDescription": "Ditch the indoors and get out; it is summer after all",
+          "longDescription": "Step aside from the bustling center and come to Fenals' beautiful gardens. A celebration of music for youngsters and adults alike",
+          "date": "August 18th – August 23rd",
+          "location": "Passeig Jardins, s/n",
+          "url": "https://lloretdemar.org/en/activity/lloret-outdoor-summer-festival/"
+        },
+        {
+          "title": "St. Trop'",
+          "image": "assets/images/sttrop.jpg",
+          "shortDescription": "Ever wondered what a Top 100 Worldwide club is like? You have come to the right place",
+          "longDescription": "A massive venue, enthusiastic party-goers and great music? The night sure is young",
+          "location": "Carrer Baix de la Riera, 16",
+          "url": "https://www.sttrop.com/"
+        },
+        
+        {
+          "title": "Tropics",
+          "image": "assets/images/tropics.jpg",
+          "shortDescription": "Not satisfied with a top 100 venue? Maybe a Top 25 will make the cut",
+          "longDescription": "Come party to the sound of the best DJs in the world, featuring mainstream artists from a plethora of countries and musical styles",
+          "location": "Av. Just Marlés Vilarrodona, 49",
+          "url": "https://www.discotropics.com/en/"
+        }
+      ]
+    },
+
+        {
+      "title": "Sports and Entertainment",
+      "subtitle": "A selection of physical and miscellanous activities and events",
+      "items": [
+        {
+          "title": "Globasket",
+          "image": "assets/images/basket.jpg",
+          "shortDescription": "Basketball tournament at its finest",
+          "longDescription": "Watch exciting matches between teams from all over the world",
+          "date": "April 13th – April 17th",
+          "location": "Carrer de Sant Roc, 10",
+          "url": "https://globasket.com/globasket-2025/"
+        },
+        {
+          "title": "Lloretrail",
+          "image": "assets/images/trail.jpg",
+          "shortDescription": "Challenge yourself in this race through nature",
+          "longDescription": "A half marathon that will take you on a route through Lloret's beautiful landscapes.",
+          "date": "March 13th",
+          "url": "https://lloretdemar.org/en/Agenda/lloret-trail-en/"
+        },
+        {
+          "title": "Lloret Cup",
+          "image": "assets/images/handball.jpg",
+          "shortDescription": "Support the growing sport of handball",
+          "longDescription": "Have a go at the amazing world of team handball in this international tournament",
+          "date": "Every Easter",
+          "url": "https://lloretcup.com/"
+        },
+        {
+          "title": "MICFootball",
+          "image": "assets/images/football.jpg",
+          "shortDescription": "The world's game - right at home in Lloret!",
+          "longDescription": "Have a go at the amazing world of team handball in this international tournament",
+          "date": "May 27th - May 31st",
+          "url": "https://micfootball.com/sedes/"
+        },
+        {
+          "title": "Padel and Tennis",
+          "image": "assets/images/padel.jpg",
+          "shortDescription": "Do you like racket sports? Come and play!",
+          "longDescription": "Multiple options at affordable prices, you can book whichever features you like",
+          "location": "Av. del Rieral, 22",
+          "url": "https://www.piscinalloret.cat/en/services-activities/book-padel-and-tennis"
+        },
+        {
+          "title": "Paintball Aventura",
+          "image": "assets/images/paintball.jpg",
+          "shortDescription": "Do you prefer something more extreme? Come join a game of paintball!",
+          "longDescription": "An expansive area containing multiple obstacles and structures, everything that one needs for entertaining paintball matches",
+          "location": "Av. de Les Alegries, 97",
+          "url": "https://adventure.lloretdemar.org/es/actividades/paintballaventura"
+        },
+                {
+          "title": "Rally Lloret de Mar",
+          "image": "assets/images/rally.jpg",
+          "shortDescription": "Pedal to the metal; experience the thrill of the race",
+          "longDescription": "An event with rich history, bringing the rumbling sports cars to Lloret",
+          "date": "February 7th – February 9th",
+          "url": "https://www.vlineorg.com/en/rally-lloret-de-mar/"
+        }
+      ]
+    },
+
+    {
+      "title": "Traditions",
+      "subtitle": "Local traditions and festivals",
+      "items": [
+        {
+          "title": "Els Gegants de Lloret",
+          "image": "assets/images/gegants.jpeg",
+          "shortDescription": "Get to know this peculiar tradition",
+          "longDescription": "Experience a centuries-old practice that embraces and celebrates the locals",
+          "location": "Avinguda de Vidreres",
+          "url": "https://www.lloret.cat/ca/seccions/festes-tradicions/identitat-i-tradicions/els-gegants-de-lloret"
+        },
+        {
+          "title": "Santa Cristina Festival",
+          "image": "assets/images/santacristina.jpg",
+          "shortDescription": "One of Lloret's two patron days",
+          "longDescription": "Lloret's main summer festivity, featuring fireworks, live music, drone shows and more",
+          "date": "July 24th",
+          "location": "Central Beach",
+          "url": "https://www.lloret.cat/ca/seccions/festes-tradicions/festes-majors/festa-major-de-santa-cristina"
+        },
+        {
+          "title": "Sant Pere del Bosc",
+          "image": "assets/images/santpere.jpg",
+          "shortDescription": "A sanctuary in the middle of a Mediterranean forest",
+          "longDescription": "A cultural heritage site that has lived through many of Lloret's eras. Doubles as a location for official cerimonies.",
+          "location": "Paratge Sant Pere del Bosc",
+          "url": "https://patrimoni.lloret.cat/en/moll-open-museum-of-lloret/sant-pere-del-bosc"
+        },
+        {
+          "title": "Sant Romà Festival",
+          "image": "assets/images/santroma.jpeg",
+          "shortDescription": "One of Lloret's two patron days",
+          "longDescription": "The cold weather analog to the summer patron day. Characterized by the concurrent Medieval Fair",
+          "date": "November 18th",
+          "location": "Plaça de l'Església",
+          "url": "https://www.lloret.cat/ca/seccions/festes-tradicions/festes-majors/festa-major-de-sant-roma"
+        }
+
+      ]
+    }
+  ]
+}

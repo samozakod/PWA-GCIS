@@ -36,6 +36,20 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /* @import "@ionic/angular/css/palettes/dark.system.css"; */
 
+
+:root {
+  --ion-background-color: #fff;
+  --ion-text-color: #000;
+  /* light theme */
+}
+
+body.dark {
+  --ion-background-color: #222a25;
+  --ion-text-color: #fff;
+  /* dark theme */
+}
+
+
 ion-modal.fullscreen-modal {
   height: 100% !important;
   --height: 100% !important;

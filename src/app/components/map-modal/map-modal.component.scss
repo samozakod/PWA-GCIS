@@ -3,3 +3,19 @@
   --border-radius: 0 !important;
   --box-shadow: none !important;
 }
+
+.leaflet-routing-container {
+  max-height: 200px; /* or whatever fits your modal */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  padding-right: 8px;
+}
+
+/* Optional: Enable smooth scrolling */
+.leaflet-routing-container::-webkit-scrollbar {
+  width: 6px;
+}
+.leaflet-routing-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 3px;
+}

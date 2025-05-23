@@ -5,7 +5,7 @@ import { AssistPage } from './assist.page';
 const routes: Routes = [
   {
     path: '',
-    component: AssistPage,
+    loadComponent: () => import('./assist.page').then(m => m.AssistPage),
   }
 ];
 

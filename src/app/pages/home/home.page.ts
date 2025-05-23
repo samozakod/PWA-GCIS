@@ -20,6 +20,7 @@ export class HomePage {
   setFrame(index: number) {
     this.currentFrame = index;
   }
-  constructor() {}
+  constructor() {
+}
 
 }

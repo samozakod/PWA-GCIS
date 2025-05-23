@@ -1,3 +1,53 @@
-<ion-content [fullscreen]="false">
-Lorem Ipsum
-</ion-content>
+<ion-content>
+  <h2 class="entertain-title">Not sure what to do?<br/>See what Lloret has to offer!</h2>
+    <ion-card *ngFor="let category of categories" class="category-card">
+      <ion-card-header>
+        <ion-card-title class="category-title">{{ category.title }}</ion-card-title>
+        <ion-card-subtitle>{{ category.subtitle }}</ion-card-subtitle>
+      </ion-card-header>
+
+      <ion-card-content>
+        <div
+          class="event-card"
+          *ngFor="let item of category.items"
+          (click)="presentItemDetails(item)"
+        >
+          <div class="event-image-wrapper">
+            <img [src]="item.image" class="event-image" />
+          </div>
+
+          <div class="event-details">
+            <div class="event-header">
+              <h3 class="event-title">{{ item.title }}</h3>
+
+              <div class="right-info">
+                <span class="event-date" *ngIf="item.date">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  {{ item.date }}
+                </span>
+                <span class="event-location" *ngIf="item.location">
+                  <ion-icon name="location-outline"></ion-icon>
+                  {{ item.location }}
+                </span>
+                <a
+                  *ngIf="item.url"
+                  class="event-link-icon"
+                  [href]="item.url"
+                  target="_blank"
+                  rel="noopener"
+                  (click)="$event.stopPropagation()"
+                  title="Visit website"
+                >
+                  <ion-icon name="globe-outline"></ion-icon>
+                </a>
+              </div>
+            </div>
+
+            <p class="event-description">
+              {{ item.shortDescription || item.description }}
+            </p>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>

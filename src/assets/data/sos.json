@@ -1,0 +1,62 @@
+{
+  "safety": [
+    {
+      "lat": 41.70697286533256,
+      "lng": 2.8350783948210014,
+      "popup": "Local Police",
+      "icon": "police"
+    },
+
+    {
+      "lat": 41.70017874338068,
+      "lng": 2.8357061090329014,
+      "popup": "Mossos d'Esquadra",
+      "icon": "police"
+    }
+
+  ],
+
+  "health": [
+    {
+      "lat": 41.703865158793484,
+      "lng": 2.8448713935963252,
+      "popup": "CAP Lloret de Mar",
+      "icon": "hospital"
+    },
+    {
+      "lat": 41.68721202279371,
+      "lng": 2.802149337148458,
+      "popup": "Blanes Hospital",
+      "icon": "hospital"
+    }
+  ],
+  "firefighters": [
+    {
+      "lat": 41.699498453465274,
+      "lng": 2.8359766334588468,
+      "popup": "Firefighters Association",
+      "icon": "fire"
+    }
+  ],
+  "info": [
+    {
+      "lat": 41.70252665858506,
+      "lng": 2.83650343040289,
+      "popup": "Tourism Office",
+      "icon": "info"
+    },
+    {
+      "lat": 41.69859646870618,
+      "lng": 2.847607377029258,
+      "popup": "Town Hall",
+      "icon": "info"
+    },
+
+    {
+      "lat": 41.70106819414515,
+      "lng": 2.842484469559022,
+      "popup": "Bus Station",
+      "icon": "info"
+    } 
+  ]
+}

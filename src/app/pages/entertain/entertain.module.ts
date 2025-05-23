@@ -13,6 +13,5 @@ import { EntertainPageRoutingModule } from './entertain-routing.module';
     FormsModule,
     EntertainPageRoutingModule
   ],
-  declarations: [EntertainPage]
 })
 export class EntertainPageModule {}

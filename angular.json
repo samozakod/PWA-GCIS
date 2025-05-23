@@ -33,6 +33,9 @@
             ],
           "styles": [
             "node_modules/leaflet/dist/leaflet.css",
+            // Adding the styles needed for leaflet's routing and search functions
+            "node_modules/leaflet-routing-machine/dist/leaflet-routing-machine.css",
+            "node_modules/leaflet-control-geocoder/dist/Control.Geocoder.css"
             "src/global.scss",
             "src/theme/variables.scss"
           ],

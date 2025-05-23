@@ -24,7 +24,7 @@
 
 
 
-<ion-menu contentId="main-content">
+<ion-menu contentId="main-content" swipeGesture="false">
   <ion-header>
     <ion-toolbar>
       <ion-title>Options</ion-title>
@@ -44,17 +44,19 @@
   </ion-item>
 
   <ion-item>
-   <ion-toggle>Dark Mode</ion-toggle>
-  </ion-item>
+   <ion-label>Dark Mode</ion-label>
+   <ion-toggle slot="end" (ionChange)="toggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
+</ion-item>
 
-  <ion-item>
-    <ion-button id="about" expand="block"> <ion-icon aria-hidden="true" name="information-circle-sharp"></ion-icon></ion-button>
-    About Us<ion-alert
-  trigger="about"
-  header="Info"
-  message="Lorem Ipsum"
-  ></ion-alert>
-  </ion-item>
+ <ion-item id="about" lines="none" style="cursor: pointer;">
+  About Us
+  <ion-alert
+    trigger="about"
+    header="Info"
+    message="Lorem Ipsum"
+    [buttons]="['Close']">
+  </ion-alert>
+</ion-item>
 
 </ion-list>
 </ion-content>

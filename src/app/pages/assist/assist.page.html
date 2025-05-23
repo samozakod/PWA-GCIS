@@ -1,3 +1,31 @@
-<ion-content [fullscreen]="false">
-	Lorem Ipsum
+<ion-content color="light">
+  <div class="emergency-banner">
+  <h1>Are you in danger?</h1>
+  <p>
+    Call the universal emergency number now: 
+    <a href="tel:972020231320132013201" class="emergency-call">112</a>
+  </p>
+</div>
+
+  <ion-list lines="full" [inset]="true">
+    <ion-item *ngFor="let contact of contacts">
+      <ion-label>
+        <h2>{{ contact.name }}</h2>
+        <p>{{ contact.description }}</p>
+        <p *ngIf="contact.address">
+          <ion-icon name="pin" style="vertical-align: middle; margin-right: 4px;"></ion-icon>
+          {{ contact.address }}
+        </p>
+      </ion-label>
+
+      <ion-buttons slot="end">
+        <ion-button fill="clear" *ngIf="contact.phone" (click)="call(contact.phone)">
+          <ion-icon name="call-outline"></ion-icon>
+        </ion-button>
+        <ion-button fill="clear" *ngIf="contact.web" [href]="contact.web" target="_blank">
+          <ion-icon name="globe-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
 </ion-content>

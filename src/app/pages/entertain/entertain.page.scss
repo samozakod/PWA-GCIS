@@ -1,0 +1,153 @@
+ion-content {
+  --padding-top: 10px;
+  --padding-bottom: 10px;
+}
+
+ion-card.category-card {
+  margin: 10px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--ion-color-primary);
+}
+
+.entertain-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #017E6E;
+}
+
+.event-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+  padding: 10px;
+}
+
+.event-card:hover {
+  transform: scale(1.01);
+}
+
+.event-image-wrapper {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-details {
+  flex-grow: 1;
+  padding-right: 4px;
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.event-meta ion-icon {
+  vertical-align: middle;
+  margin-right: 4px;
+}
+
+.event-link-icon {
+  font-size: 1.2rem;
+  color: var(--ion-color-primary);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event-location {
+  font-size: 0.85rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+
+  ion-icon {
+    font-size: 16px;
+    margin-right: 4px;
+    color: var(--ion-color-medium);
+  }
+}
+
+.event-date,
+.event-location {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #444;
+
+  ion-icon {
+    font-size: 16px;
+    margin-right: 4px;
+    color: var(--ion-color-medium);
+  }
+}
+
+.event-title {
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 600;
+}
+
+.event-date {
+  font-size: 0.85rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.event-description {
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+.event-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--ion-color-primary);
+  text-decoration: underline;
+}
+
+.right-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.right-info ion-icon {
+  vertical-align: middle;
+  margin-right: 4px;
+}

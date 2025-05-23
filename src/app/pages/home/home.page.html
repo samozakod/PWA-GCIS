@@ -1,65 +1,82 @@
 <ion-content [fullscreen]="false">
-  <h1 class="welcome-text">
-    Welcome!
-  </h1>
+  <div class="homepage-wrapper">
 
-  <div class="info-box">
-    Greetings! This is (the app's name), your gateway to the town of Lloret de Mar. The main goal of this app is to help you make the most out of your stay. (Placeholder Text)
-  </div>
+    <!-- Welcome -->
+    <h1 class="welcome-text">Welcome to Lloret's Companion App</h1>
 
-  <div class="content-row">
-    <!-- Weather Section -->
-    <div class="iframe-wrapper">
-      <!-- FAB Button -->
-      <ion-fab vertical="top" horizontal="start">
-        <ion-fab-button size="small">
-          <ion-icon name="chevron-forward-circle"></ion-icon>
-        </ion-fab-button>
-        <ion-fab-list side="end">
-          <ion-fab-button (click)="setFrame(1)" [ngClass]="{ 'fab-active': currentFrame === 1 }">
-            <ion-icon name="calendar-number-sharp"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button (click)="setFrame(2)" [ngClass]="{ 'fab-active': currentFrame === 2 }">
-            <ion-icon name="stats-chart-sharp"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button (click)="setFrame(3)" [ngClass]="{ 'fab-active': currentFrame === 3 }">
-            <ion-icon name="rainy-sharp"></ion-icon>
-          </ion-fab-button>
-          <ion-fab-button (click)="setFrame(4)" [ngClass]="{ 'fab-active': currentFrame === 4 }">
-            <ion-icon name="warning-sharp"></ion-icon>
-          </ion-fab-button>
-        </ion-fab-list>
-      </ion-fab>
-
-      <!-- Iframes -->
-      <div class="iframe-box">
-        <iframe *ngIf="currentFrame === 1"
-          src="https://static-m.meteo.cat/ginys/municipal8d?location=170950&language=en&color=017E6E&tempFormat=ºC&target=_blank"
-          title="8-day local weather forecast" frameborder="0" scrolling="no" width="100%" height="260"></iframe>
-
-        <iframe *ngIf="currentFrame === 2"
-          src="https://static-m.meteo.cat/ginys/municipal72h?location=170950&language=en&color=017E6E&tempFormat=ºC&windSpeedFormat=km/h&mainChart=estCel&secondaryChart=true&target=_blank"
-          title="72-hour local weather forecast" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
-
-        <iframe *ngIf="currentFrame === 3"
-          src="https://static-m.meteo.cat/ginys/mapaRadar?language=en&color=017E6E&target=_blank"
-          title="Latest radar image" frameborder="0" scrolling="no" width="100%" height="412"></iframe>
-
-        <iframe *ngIf="currentFrame === 4"
-          src="https://static-m.meteo.cat/ginys/mapaAvisos?language=en&color=017E6E&target=_blank"
-          title="Warnings Map" frameborder="0" scrolling="no" width="100%" height="525"></iframe>
-      </div>
+    <!-- Intro Info -->
+    <div class="info-box">
+      Use this home page to take a peek at Lloret or use the rest of the tabs at the bottom tabs to see all that the town has to offer. Tap the ☰ button in the top-left corner to customize your experience.<br/>Enjoy your stay!
     </div>
 
-    <!-- Instagram Section -->
-    <ion-card class="insta-card">
-      <ion-card-content>
-        <iframe 
-          src="https://www.instagram.com/lloretturisme/embed"
-          width="100%" height="250" 
-          style="border:none; overflow:hidden;" 
-          scrolling="yes"></iframe>
-      </ion-card-content>
-    </ion-card>
+    <!-- Main Content -->
+    <div class="content-section">
+      
+      <!-- Weather Section -->
+      <div class="weather-widget">
+        <!-- FAB Button -->
+        <ion-fab slot="fixed" vertical="top" horizontal="start" class="fab-wrapper">
+          <ion-fab-button size="small">
+            <ion-icon name="chevron-forward-circle"></ion-icon>
+          </ion-fab-button>
+          <ion-fab-list side="end">
+            <ion-fab-button (click)="setFrame(1)" [ngClass]="{ 'fab-active': currentFrame === 1 }">
+              <ion-icon name="calendar-number-sharp"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button (click)="setFrame(2)" [ngClass]="{ 'fab-active': currentFrame === 2 }">
+              <ion-icon name="stats-chart-sharp"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button (click)="setFrame(3)" [ngClass]="{ 'fab-active': currentFrame === 3 }">
+              <ion-icon name="rainy-sharp"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button (click)="setFrame(4)" [ngClass]="{ 'fab-active': currentFrame === 4 }">
+              <ion-icon name="warning-sharp"></ion-icon>
+            </ion-fab-button>
+          </ion-fab-list>
+        </ion-fab>
+
+        <!-- Iframes -->
+        <div class="iframe-box scrollable-frame">
+          <iframe *ngIf="currentFrame === 1"
+            src="https://static-m.meteo.cat/ginys/municipal8d?location=170950&language=en&color=017E6E&tempFormat=ºC&target=_blank"
+            title="8-day forecast" frameborder="0" width="100%" height="260"></iframe>
+
+          <iframe *ngIf="currentFrame === 2"
+            src="https://static-m.meteo.cat/ginys/municipal72h?location=170950&language=en&color=017E6E&tempFormat=ºC&windSpeedFormat=km/h&mainChart=estCel&secondaryChart=true&target=_blank"
+            title="72-hour forecast" frameborder="0" width="100%" height="350"></iframe>
+
+          <iframe *ngIf="currentFrame === 3"
+            src="https://static-m.meteo.cat/ginys/mapaRadar?language=en&color=017E6E&target=_blank"
+            title="Radar" frameborder="0" width="100%" height="412"></iframe>
+
+          <iframe *ngIf="currentFrame === 4"
+            src="https://static-m.meteo.cat/ginys/mapaAvisos?language=en&color=017E6E&target=_blank"
+            title="Warnings" frameborder="0" width="100%" height="525"></iframe>
+        </div>
+      </div>
+
+      <!-- Instagram Embed -->
+      <ion-card class="insta-card">
+        <ion-card-content>
+          <iframe 
+            src="https://www.instagram.com/lloretturisme/embed"
+            width="100%" height="380"
+            style="border:none;" scrolling="yes">
+          </iframe>
+        </ion-card-content>
+      </ion-card>
+
+       <!-- LiveCam Card at the bottom -->
+      <ion-card class="livecam-card">
+        <ion-card-content>
+          <div class="iframe-box">
+            <iframe
+              src="https://www.whatsupcams.com/en/webcams/spain/catalonia/lloret-de-mar/webcam-lloret-de-mar-beach/"
+              width="100%"  frameborder="0" allowfullscreen scrolling="yes">
+            </iframe>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
