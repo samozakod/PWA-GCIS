@@ -1,11 +1,11 @@
 <ion-tabs>
 
   <ion-tab-bar slot="bottom">
-   <ion-tab-button tab="Home" href="/home">
-    <ion-icon aria-hidden="true" name="home-sharp"></ion-icon>
-    <ion-label>Home</ion-label>
-  </ion-tab-button>
-  
+    <ion-tab-button tab="Home" href="/home">
+      <ion-icon aria-hidden="true" name="home-sharp"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+
     <ion-tab-button tab="Explore" href="/pages/explore">
       <ion-icon aria-hidden="true" name="map-sharp"></ion-icon>
       <ion-label>Explore</ion-label>
@@ -22,46 +22,63 @@
     </ion-tab-button>
   </ion-tab-bar>
 
+  <ion-menu contentId="main-content" swipeGesture="false">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Options</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <ion-list lines="inset">
 
+        <ion-item id="accessibility" lines="bottom" style="cursor: pointer;">
+          Accessibility
+          <ion-modal trigger="accessibility" cssClass="accessibility-modal">
+            <ng-template>
+              <ion-header>
+                <ion-toolbar>
+                  <ion-title>Accessibility</ion-title>
+                  <ion-buttons slot="end">
+                    <ion-button onclick="document.querySelector('ion-modal').dismiss()">Close</ion-button>
+                  </ion-buttons>
+                </ion-toolbar>
+              </ion-header>
+              <ion-content class="ion-padding">
+                <ion-item>
+                  <ion-label>Large Font</ion-label>
+                  <ion-toggle slot="end" (ionChange)="toggleFontSize($event)" [checked]="isLargeFont"></ion-toggle>
+                </ion-item>
+              </ion-content>
+            </ng-template>
+          </ion-modal>
+        </ion-item>
 
-<ion-menu contentId="main-content" swipeGesture="false">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Options</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content class="ion-padding">
-    <ion-list lines="inset">
-  <ion-item>
-   <ion-button id="open-modal" expand="block">Accessibility</ion-button>
-  </ion-item>
-  <ion-item>
-    <ion-select label="Language" label-placement="floating">
-      <ion-select-option value="english">English</ion-select-option>
-      <ion-select-option value="spanish">Spanish</ion-select-option>
-      <ion-select-option value="catalan">Catalan</ion-select-option>
-    </ion-select>
-  </ion-item>
+        <ion-item>
+          <ion-select label="Language" label-placement="floating">
+            <ion-select-option value="english">English</ion-select-option>
+            <ion-select-option value="spanish">Spanish</ion-select-option>
+            <ion-select-option value="catalan">Catalan</ion-select-option>
+          </ion-select>
+        </ion-item>
 
-  <ion-item>
-   <ion-label >Dark Mode</ion-label>
-   <ion-toggle slot="end" (ionChange)="toggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
-</ion-item>
+        <ion-item>
+          <ion-label>Dark Mode</ion-label>
+          <ion-toggle slot="end" (ionChange)="toggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
+        </ion-item>
 
- <ion-item id="about" lines="none" style="cursor: pointer;">
-  About Us
-  <ion-alert
-    trigger="about"
-    header="Info"
-    message="Lorem Ipsum"
-    [buttons]="['Close']">
-  </ion-alert>
-</ion-item>
+        <ion-item id="about" lines="none" style="cursor: pointer;">
+          About Us
+          <ion-alert
+            trigger="about"
+            header="Info"
+            message="Lorem Ipsum"
+            [buttons]="['Close']">
+          </ion-alert>
+        </ion-item>
 
-</ion-list>
-</ion-content>
-</ion-menu>
-
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
   <ion-header id="main-content">
     <ion-toolbar>
@@ -72,4 +89,3 @@
   </ion-header>
 
 </ion-tabs>
-

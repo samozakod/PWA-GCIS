@@ -9,29 +9,20 @@ import { Component, OnInit } from '@angular/core';
 export class TabsPage implements OnInit {
 
   isDarkMode = false;
+  isLargeFont = false;
 
   constructor() {}
 
-  // Check system preference for light-dark mode
-  // ngOnInit() {
-  //   // Check localStorage or system preference on startup
-  //   const savedDark = localStorage.getItem('dark-mode') === 'true';
-  //   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  //   this.isDarkMode = savedDark || prefersDark;
-  //   this.setDarkMode(this.isDarkMode);
-  // }
-
-
-
   ngOnInit() {
-  const savedDark = localStorage.getItem('dark-mode');
+    const savedDark = localStorage.getItem('dark-mode');
+    const savedFont = localStorage.getItem('large-font');
 
-  // Default to light mode (false) if nothing is saved
-  this.isDarkMode = savedDark === 'true';
-  this.setDarkMode(this.isDarkMode);
-}
+    this.isDarkMode = savedDark === 'true';
+    this.isLargeFont = savedFont === 'true';
 
+    this.setDarkMode(this.isDarkMode);
+    this.setFontSize(this.isLargeFont);
+  }
 
   toggleDarkMode(event: any) {
     this.isDarkMode = event.detail.checked;
@@ -41,5 +32,15 @@ export class TabsPage implements OnInit {
 
   setDarkMode(shouldAdd: boolean) {
     document.body.classList.toggle('dark', shouldAdd);
+  }
+
+  toggleFontSize(event: any) {
+    this.isLargeFont = event.detail.checked;
+    this.setFontSize(this.isLargeFont);
+    localStorage.setItem('large-font', this.isLargeFont.toString());
+  }
+
+  setFontSize(enableLarge: boolean) {
+    document.body.classList.toggle('large-font', enableLarge);
   }
 }

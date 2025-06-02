@@ -17,7 +17,7 @@ async openMap(mapType: string) {
   const modal = await this.modalCtrl.create({
     component: MapModalComponent,
     componentProps: { mapType },
-    cssClass: 'fullscreen-modal',
+    cssClass: 'map-modal',
     showBackdrop: true,
     backdropDismiss: false,
     handle: false,

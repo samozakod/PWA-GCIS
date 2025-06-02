@@ -58,12 +58,9 @@ body.dark {
   --ion-border-color: #444;
 }
 
-
 body.dark .alert-radio-label {
-  color: #fff !important; // Or a more subtle light tone like #f0f0f0
+  color: #fff ; // Or a more subtle light tone like #f0f0f0
 }
-
-
 
 body.dark ion-alert {
   --background: #1e1e1e;
@@ -72,21 +69,86 @@ body.dark ion-alert {
 
 body.dark ion-alert .alert-title,
 body.dark ion-alert .alert-message {
-  color: #fff !important;
+  color: #fff ;
 }
 
-
-
-ion-modal.fullscreen-modal {
-  height: 100% !important;
-  --height: 100% !important;
+ion-modal.map-modal {
+  height: 100% ;
+  --height: 100% ;
 }
 
-.fullscreen-modal {
-  --height: 100% !important;
-  --width: 100% !important;
-  --border-radius: 0 !important;
-  --max-height: 100% !important;
-  --max-width: 100% !important;
+.map-modal {
+  --height: 100% ;
+  --width: 100% ;
+  --border-radius: 0 ;
+  --max-height: 100% ;
+  --max-width: 100% ;
   --overflow: hidden;
+}
+
+body.large-font {
+  font-size: 1.125rem;
+  transition: font-size 0.3s ease;
+}
+
+body.large-font ion-label,
+body.large-font ion-button,
+body.large-font ion-title,
+body.large-font ion-select,
+body.large-font ion-item {
+  font-size: 1.125rem;
+}
+
+body.large-font h1,
+body.large-font h2,
+body.large-font h3,
+body.large-font h4,
+body.large-font h5 {
+  font-size: 1.3rem;
+}
+
+body.large-font p,
+body.large-font span,
+body.large-font a {
+  font-size: 1.125rem;
+}
+
+
+body.large-font ion-card-title,
+body.large-font ion-card-subtitle {
+  font-size: 1.2rem;
+}
+
+/* Custom page-specific classes */
+body.large-font .explore-title,
+body.large-font .entertain-title,
+body.large-font .category-title,
+body.large-font .event-title,
+body.large-font .event-description,
+body.large-font .assist-title {
+  font-size: 1.25rem;
+}
+
+
+body.large-font .event-date,
+body.large-font .event-location,
+body.large-font .right-info {
+  font-size: 1.1rem;
+}
+
+
+body.large-font ion-modal {
+  font-size: 1.125rem;
+}
+
+body.large-font ion-alert .alert-title {
+  font-size: 1.3rem;
+}
+
+body.large-font ion-alert .alert-message {
+  font-size: 1.125rem;
+}
+
+body.large-font ion-alert button {
+  font-size: 1.125rem;
 }
