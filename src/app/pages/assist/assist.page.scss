@@ -36,3 +36,6 @@ ion-icon {
   }
 }
 
+body.dark ion-content::part(scroll) {
+  background: var(--ion-background-color);
+}

@@ -46,8 +46,35 @@
 body.dark {
   --ion-background-color: #222a25;
   --ion-text-color: #fff;
+  --ion-item-background: #1e1e1e;
+  --ion-border-color: #444;
   /* dark theme */
 }
+
+body.dark {
+  --ion-background-color: #121212;
+  --ion-item-background: #1e1e1e;
+  --ion-text-color: #ffffff;
+  --ion-border-color: #444;
+}
+
+
+body.dark .alert-radio-label {
+  color: #fff !important; // Or a more subtle light tone like #f0f0f0
+}
+
+
+
+body.dark ion-alert {
+  --background: #1e1e1e;
+  --color: #fff;
+}
+
+body.dark ion-alert .alert-title,
+body.dark ion-alert .alert-message {
+  color: #fff !important;
+}
+
 
 
 ion-modal.fullscreen-modal {

@@ -118,7 +118,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
     // --- MapType logic ---
           if (this.mapType === 'Geolocate Me') {
         const userIcon = L.icon({
-          iconUrl: 'assets/icon/marker_geo.png',
+          iconUrl: 'assets/icon/start.png',
           iconSize: [30, 30],
           iconAnchor: [15, 30],
         });
