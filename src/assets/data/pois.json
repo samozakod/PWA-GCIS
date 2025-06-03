@@ -4,7 +4,7 @@
       "type": "marker",
       "lat": 41.693866,
       "lng": 2.839467,
-      "popup": "Sant Joan's Castle",
+      "popup": "poi.joan",
       "icon": "gold"
     },
 
@@ -12,7 +12,7 @@
       "type": "marker",
       "lat": 41.699367,
       "lng": 2.859581,
-      "popup": "D'en Plaja Castle",
+      "popup": "poi.plaja",
       "icon": "gold"
     },
 
@@ -20,7 +20,7 @@
       "type": "marker",
       "lat":  41.71610187394048,
       "lng": 2.8481291651653455,
-      "popup": "Iberian Settlement of Puig de Castellet",
+      "popup": "poi.puig",
       "icon": "gold"
     },
 
@@ -28,7 +28,7 @@
       "type": "marker",
       "lat": 41.71143267150485,
       "lng": 2.8119697265382073,
-      "popup": "The Angel's Monument",
+      "popup": "poi.angel",
       "icon": "gold"
     },
 
@@ -36,7 +36,7 @@
       "type": "marker",
       "lat": 41.69966025963462,
       "lng": 2.8507234767215373,
-      "popup": "Maritime Museum",
+      "popup": "poi.museum",
       "icon": "gold"
     },
 
@@ -44,7 +44,7 @@
       "type": "marker",
       "lat": 41.695178,
       "lng": 2.844866,
-      "popup": "La Dona Marinera's Monument",
+      "popup": "poi.dona",
       "icon": "gold"
     },
     {
@@ -54,7 +54,7 @@
       "radius": 190,
       "color": "goldenrod",
       "fillColor": "palegoldenrod",
-      "popup": "Historical Center"
+      "popup": "poi.center"
     },
 
 
@@ -65,7 +65,7 @@
       "radius": 250,
       "color": "goldenrod",
       "fillColor": "palegoldenrod",
-      "popup": "Sant Pere del Bosc"
+      "popup": "poi.pere"
     },
 
     {
@@ -79,7 +79,7 @@
       ],
       "color": "goldenrod",
       "fillColor": "palegoldenrod",
-      "popup": "Lloret Theater"
+      "popup": "poi.theater"
     },
 
     {
@@ -95,7 +95,7 @@
       ],
       "color": "goldenrod",
       "fillColor": "palegoldenrod",
-      "popup": "Santa Clotilde Gardens"
+      "popup": "poi.garden"
     }
   ],
 
@@ -115,7 +115,7 @@
       ],
       "color": "crimson",
       "fillColor": "red",
-      "popup": "Water World Aqua Park"
+      "popup": "poi.water"
     },
 
     {
@@ -135,7 +135,7 @@
       ],
       "color": "crimson",
       "fillColor": "red",
-      "popup": "Gnomo Park"
+      "popup": "poi.gnomo"
     },
 
     {
@@ -147,14 +147,14 @@
       ],
       "color": "crimson",
       "fillColor": "red",
-      "popup": "Mini Golf and Bowling"
+      "popup": "poi.golf"
     },
 
     {
       "type": "marker",
       "lat": 41.70161461735266,
       "lng": 2.844464313281586,
-      "popup": "Sould Park",
+      "popup": "poi.sould",
       "icon": "red"
     },
 
@@ -168,7 +168,7 @@
         [ 41.7105455, 2.832094 ] 
       ],
       "color": "red",
-      "popup": "Karting Formula Lloret"
+      "popup": "poi.kart"
     }
   ],
   
@@ -188,7 +188,7 @@
         [ 41.707624, 2.8340042 ], [ 41.7078201, 2.8337335 ], [ 41.7079482, 2.8335458 ] 
       ],
       "color": "green",
-      "popup": "Buc's Hill"
+      "popup": "poi.buc"
     }, 
 
     {
@@ -202,7 +202,7 @@
  
       ],
       "color": "green",
-      "popup": "Santa Cristina Beach"
+      "popup": "poi.cristina"
     }, 
 
     {
@@ -216,7 +216,7 @@
  
       ],
       "color": "green",
-      "popup": "Sa Boadella Beach"
+      "popup": "poi.boadella"
     }, 
 
     {
@@ -235,7 +235,7 @@
         [ 41.6955677, 2.8452747 ], [ 41.6956217, 2.8455668 ]
       ],
       "color": "green",
-      "popup": "Central Beach"
+      "popup": "poi.central"
     }, 
 
     {
@@ -250,7 +250,7 @@
 
       ],
       "color": "green",
-      "popup": "Canyelles Beach"
+      "popup": "poi.cany"
     }, 
 
 
@@ -266,7 +266,7 @@
          
       ],
       "color": "green",
-      "popup": "Fenals Beach"
+      "popup": "poi.fenals"
     }
   ],
 
@@ -278,7 +278,7 @@
       "radius": 220,
       "color": "mediumpurple",
       "fillColor": "rebeccapurple",
-      "popup": "Nightclub Zone"
+      "popup": "poi.night"
     },
 
     {
@@ -291,14 +291,14 @@
       ],
       "color": "mediumpurple",
       "fillColor": "rebeccapurple",
-      "popup": "Gran Casino Costa Brava"
+      "popup": "poi.casino"
     },
 
     {
       "type": "marker",
       "lat": 41.6973212,
       "lng": 2.8335,
-      "popup": "El Pub",
+      "popup": "poi.elpub",
       "icon": "violet"
     },
 
@@ -306,7 +306,7 @@
       "type": "marker",
       "lat": 41.700227131664846,
       "lng": 2.8491339357426124,
-      "popup": "The Stones Rock Pub",
+      "popup": "poi.stones",
       "icon": "violet"
     },
 
@@ -314,7 +314,7 @@
       "type": "marker",
       "lat": 41.69980614096831,
       "lng": 2.83426278807379,
-      "popup": "The Nags Head",
+      "popup": "poi.nags",
       "icon": "violet"
     },
 
@@ -322,7 +322,7 @@
       "type": "marker",
       "lat": 41.71085652308501,
       "lng": 2.831678025666307,
-      "popup": "Wine Palace Lloret",
+      "popup": "poi.wine",
       "icon": "violet"
     }
 
@@ -341,7 +341,7 @@
       ],
       "color": "dodgerblue",
       "fillColor": "cornflowerblue",
-      "popup": "El Molí Sports Complex"
+      "popup": "poi.moli"
     },
 
     {
@@ -354,7 +354,7 @@
       ],
       "color": "dodgerblue",
       "fillColor": "cornflowerblue",
-      "popup": "Swimming and Racket Sports Facilities"
+      "popup": "poi.swim"
     },
 
     {
@@ -370,7 +370,7 @@
       ],
       "color": "dodgerblue",
       "fillColor": "cornflowerblue",
-      "popup": "Track and Field Stadium"
+      "popup": "poi.track"
     },
 
     {
@@ -387,7 +387,7 @@
       ],
       "color": "dodgerblue",
       "fillColor": "cornflowerblue",
-      "popup": "Municipal Sports Complex"
+      "popup": "poi.mun"
     },
 
     {
@@ -400,7 +400,7 @@
       ],
       "color": "dodgerblue",
       "fillColor": "cornflowerblue",
-      "popup": "Pompeu Fabra Arena"
+      "popup": "poi.pompeu"
     },
 
     {
@@ -412,7 +412,7 @@
       ],
       "color": "dodgerblue",
       "fillColor": "cornflowerblue",
-      "popup": "Cruyff Court"
+      "popup": "poi.cruyff"
     },
 
 
@@ -420,7 +420,7 @@
       "type": "marker",
       "lat": 41.70101819421093,
       "lng": 2.85500651874611,
-      "popup": "Nautical Club Lloret",
+      "popup": "poi.nautic",
       "icon": "blue"
     },
 
@@ -428,7 +428,7 @@
       "type": "marker",
       "lat": 41.6974388775084,
       "lng": 2.8453768359247076,
-      "popup": "Lloret Water Xtreme",
+      "popup": "poi.xtreme",
       "icon": "blue"
     }
   ]

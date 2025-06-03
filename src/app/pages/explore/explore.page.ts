@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
-import { IonCol, IonGrid, IonRow, IonContent, IonButton } from '@ionic/angular/standalone';  // Import required Ionic components
+import { IonCol, IonGrid, IonRow, IonContent, IonButton } from '@ionic/angular/standalone'; 
 import { ModalController } from '@ionic/angular';
 import { MapModalComponent } from 'src/app/components/map-modal/map-modal.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-explore',
   templateUrl: 'explore.page.html',
   styleUrls: ['explore.page.scss'],
-  imports: [IonCol, IonGrid, IonRow, IonContent, IonButton],  // Add Ionic components here
+  imports: [IonCol, IonGrid, IonRow, IonContent, IonButton, TranslateModule],
   standalone: true,
 })
 export class ExplorePage {

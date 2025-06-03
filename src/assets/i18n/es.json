@@ -7,7 +7,7 @@
 		"lang": "Idioma",
 		"eng": "Inglés",
 		"spa": "Castellano",
-		"cat": "Catalán",
+		"bul": "Búlgaro",
 		"dark": "Modo oscuro",
 		"about button": "Acerca de",
 		"home": "Inicio",
@@ -18,7 +18,77 @@
     	"desc": "Aplicación no oficial, diseñada para ayudar a los visitantes durante su estancia. El código es abierto."
 	},
  	 "home": {
-    	"welcome": "Bienvenido a Lloret Companion App!"
-	}
+    	"welcome": "Bienvenido a la aplicación asistencial de Lloret!",
+    	"banner": "Usa esta página de inicio para echar un vistazo a Lloret o usa las demás pestañas de la parte inferior para ver todo lo que ofrece la ciudad. Pulsa el botón ☰ en la esquina superior izquierda para personalizar tu experiencia.<br/>¡Disfruta de tu estancia!" 
+	},
+  "explore": {
+    "title": "Necesitas un mapa?<br/>Elige el más adecuado",
+    "geo":"Dónde estoy?",
+    "poi":"Cuáles son los PDI?",
+    "gps":"Cómo llego hasta allí?",
+    "sos":"Dónde puedo encontrar ayuda?"
+  },
+  "modal": {
+    "geo":"Geolocalízame",
+    "poi":"Puntos de interés",
+    "gps":"Planificador de ruta",
+    "sos":"Puntos seguros"
+  },
+  "poi": {
+  "joan": "Castillo de Sant Joan",
+  "plaja": "Castillo D'en Plaja",
+  "puig": "Poblado Íbero de Puig de Castellet",
+  "angel": "Monumento del Ángel",
+  "museum": "Museo del Mar",
+  "dona": "Monumento a La Dona Marinera",
+  "center": "Centro Histórico",
+  "pere": "Sant Pedro del Bosque",
+  "theater": "Teatro de Lloret",
+  "garden": "Jardines de Santa Clotilde",
+  "water": "Parque Acuático Water World",
+  "gnomo": "Gnomo Park",
+  "golf": "Mini Golf y Bolera",
+  "sould": "Sould Park",
+  "kart": "Karting Fórmula Lloret",
+  "buc": "Colina del Buc",
+  "cristina": "Playa de Santa Cristina",
+  "boadella": "Playa de Sa Boadella",
+  "central": "Playa Central",
+  "cany": "Playa de Canyelles",
+  "fenals": "Playa de Fenals",
+  "night": "Zona de Discotecas",
+  "casino": "Gran Casino Costa Brava",
+  "elpub": "El Pub",
+  "stones": "The Stones Rock Pub",
+  "nags": "The Nags Head",
+  "wine": "Wine Palace Lloret",
+  "moli": "Complejo Deportivo El Molí",
+  "swim": "Instalaciones de Natación y Raqueta",
+  "track": "Estadio de Atletismo",
+  "mun": "Complejo Deportivo Municipal",
+  "pompeu": "Pabellón Pompeu Fabra",
+  "cruyff": "Cruyff Court",
+  "nautic": "Club Náutico de Lloret",
+  "xtreme": "Lloret Water Xtreme"
+},
+"sos": {
+  "pol": "Policía Local",
+  "moss": "Mossos de Esquadra",
+  "cap": "CAP Lloret de Mar",
+  "hosp": "Hospital de Blanes",
+  "fire": "Asociación de Bomberos",
+  "tour": "Oficina de Turismo",
+  "hall": "Ayuntamiento",
+  "bus": "Estación de Autobuses"
+},
+"soscat": {
+  "Safety": "Seguridad",
+  "Health": "Salud",
+  "Firefighters": "Bomberos",
+  "Info": "Información"
 }
+}
+
+
+
 

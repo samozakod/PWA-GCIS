@@ -3,14 +3,14 @@
     {
       "lat": 41.70697286533256,
       "lng": 2.8350783948210014,
-      "popup": "Local Police",
+      "popup": "sos.pol", 
       "icon": "police"
     },
 
     {
       "lat": 41.70017874338068,
       "lng": 2.8357061090329014,
-      "popup": "Mossos d'Esquadra",
+      "popup": "sos.moss", 
       "icon": "police"
     }
 
@@ -20,13 +20,13 @@
     {
       "lat": 41.703865158793484,
       "lng": 2.8448713935963252,
-      "popup": "CAP Lloret de Mar",
+      "popup": "sos.cap", 
       "icon": "hospital"
     },
     {
       "lat": 41.68721202279371,
       "lng": 2.802149337148458,
-      "popup": "Blanes Hospital",
+      "popup": "sos.hosp", 
       "icon": "hospital"
     }
   ],
@@ -34,7 +34,7 @@
     {
       "lat": 41.699498453465274,
       "lng": 2.8359766334588468,
-      "popup": "Firefighters Association",
+      "popup": "sos.fire", 
       "icon": "fire"
     }
   ],
@@ -42,20 +42,20 @@
     {
       "lat": 41.70252665858506,
       "lng": 2.83650343040289,
-      "popup": "Tourism Office",
+      "popup": "sos.tour", 
       "icon": "info"
     },
     {
       "lat": 41.69859646870618,
       "lng": 2.847607377029258,
-      "popup": "Town Hall",
+      "popup": "sos.hall", 
       "icon": "info"
     },
 
     {
       "lat": 41.70106819414515,
       "lng": 2.842484469559022,
-      "popup": "Bus Station",
+      "popup": "sos.bus", 
       "icon": "info"
     } 
   ]

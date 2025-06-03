@@ -45,7 +45,7 @@
               </ion-header>
               <ion-content class="ion-padding">
                 <ion-item>
-                  <ion-label>Large Font</ion-label>
+                  <ion-label>{{ 'ui.font' | translate }}</ion-label>
                   <ion-toggle slot="end" (ionChange)="toggleFontSize($event)" [checked]="isLargeFont"></ion-toggle>
                 </ion-item>
               </ion-content>
@@ -59,7 +59,7 @@
           <ion-select interface="popover" [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
             <ion-select-option value="en">{{ 'ui.eng' | translate }}</ion-select-option>
             <ion-select-option value="es">{{ 'ui.spa' | translate }}</ion-select-option>
-            <ion-select-option value="ca">{{ 'ui.cat' | translate }}</ion-select-option>
+            <ion-select-option value="bg">{{ 'ui.bul' | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
 

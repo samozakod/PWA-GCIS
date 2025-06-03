@@ -8,7 +8,7 @@ import 'leaflet-routing-machine';
 import * as poiData from 'src/assets/data/pois.json';
 import * as sosData from 'src/assets/data/sos.json';
 import { Geolocation } from '@awesome-cordova-plugins/geolocation/ngx';
-
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-map-modal',
@@ -23,17 +23,36 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
   pois: any[] = [];
   sos: any[] = [];
   routeControl: any;
+  translatedTitle: string = '';
 
   constructor(
     private modalCtrl: ModalController,
-    private geolocation: Geolocation
+    private geolocation: Geolocation,
+    private translate: TranslateService
   ) {}
 
   ngAfterViewInit() {
     setTimeout(() => {
+      this.setTranslatedTitle();
       this.initMap();
     }, 300);
   }
+
+  setTranslatedTitle() {
+  const mapTypeToKey: { [key: string]: string } = {
+    'Geolocate Me': 'geo',
+    'Points of Interest': 'poi',
+    'Path Guide': 'gps',
+    'Safe Points': 'sos',
+  };
+
+  const key = mapTypeToKey[this.mapType];
+
+  this.translate.get('modal.' + key).subscribe((res: string) => {
+    this.translatedTitle = res;
+  });
+}
+
 
   initMap() {
     this.map = L.map('leaflet-map').setView([41.6988, 2.844], 20).fitBounds([
@@ -196,7 +215,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
       if (item.type === 'marker') {
         const marker = L.marker([item.lat, item.lng], {
           icon: icons[item.icon] || icons.orange,
-        }).bindPopup(item.popup);
+        }).bindPopup(this.translate.instant(item.popup));
         layerItems.push(marker);
       } else if (item.type === 'circle') {
         const circle = L.circle([item.lat, item.lng], {
@@ -204,12 +223,12 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
           color: item.color,
           fillColor: item.fillColor,
           fillOpacity: 0.5,
-        }).bindPopup(item.popup);
+        }).bindPopup(this.translate.instant(item.popup));
         layerItems.push(circle);
       } else if (item.type === 'polygon') {
         const polygon = L.polygon(item.coords, {
           color: item.color,
-        }).bindPopup(item.popup);
+        }).bindPopup(this.translate.instant(item.popup));
         layerItems.push(polygon);
       }
     }
@@ -229,7 +248,10 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
     const label = `<span style="display:inline-block;width:12px;height:12px;margin-right:6px;
     background-color:${color};border-radius:50%;"></span>${category}`;
 
-    overlays[label] = layerGroup;
+    this.translate.get(`poicat.${category}`).subscribe((translated) => {
+      const label = `<span style="..."></span>${translated}`;
+      overlays[label] = layerGroup;
+    });
     layerGroup.addTo(this.map);
   }
 
@@ -329,67 +351,74 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
 
 
     else if (this.mapType === 'Safe Points') {
-      const sosDataParsed = (sosData as any).default;
+  const sosDataParsed = (sosData as any).default;
 
-      const icons: any = {
-        police: new L.Icon({
-          iconUrl: 'assets/icon/police.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-        }),
-        fire: new L.Icon({
-          iconUrl: 'assets/icon/fire.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-        }),
-        hospital: new L.Icon({
-          iconUrl: 'assets/icon/hospital.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-        }),
-        info: new L.Icon({
-          iconUrl: 'assets/icon/info.png',
-          iconSize: [25, 41],
-          iconAnchor: [12, 41],
-          popupAnchor: [1, -34],
-        }),
-      };
+  const icons: any = {
+    police: new L.Icon({
+      iconUrl: 'assets/icon/police.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    fire: new L.Icon({
+      iconUrl: 'assets/icon/fire.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    hospital: new L.Icon({
+      iconUrl: 'assets/icon/hospital.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+    info: new L.Icon({
+      iconUrl: 'assets/icon/info.png',
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
+      popupAnchor: [1, -34],
+    }),
+  };
 
-      const makeMarkers = (items: any[], iconKey: string) =>
-        L.layerGroup(
-          items.map((m: any) =>
-            L.marker([m.lat, m.lng], {
-              icon: icons[m.icon] || icons[iconKey],
-            }).bindPopup(m.popup)
-          )
-        );
+  const makeMarkers = (items: any[], iconKey: string) =>
+    L.layerGroup(
+      items.map((m: any) =>
+        L.marker([m.lat, m.lng], {
+          icon: icons[m.icon] || icons[iconKey],
+        }).bindPopup(this.translate.instant(m.popup))
+      )
+    );
 
-      const safetyLayer = makeMarkers(sosDataParsed.safety, 'police');
-      const healthLayer = makeMarkers(sosDataParsed.health, 'hospital');
-      const fireLayer = makeMarkers(sosDataParsed.firefighters, 'fire');
-      const infoLayer = makeMarkers(sosDataParsed.info, 'info');
+  const safetyLayer = makeMarkers(sosDataParsed.safety, 'police');
+  const healthLayer = makeMarkers(sosDataParsed.health, 'hospital');
+  const fireLayer = makeMarkers(sosDataParsed.firefighters, 'fire');
+  const infoLayer = makeMarkers(sosDataParsed.info, 'info');
 
-      // Add all to map by default
-      safetyLayer.addTo(this.map);
-      healthLayer.addTo(this.map);
-      fireLayer.addTo(this.map);
-      infoLayer.addTo(this.map);
+  safetyLayer.addTo(this.map);
+  healthLayer.addTo(this.map);
+  fireLayer.addTo(this.map);
+  infoLayer.addTo(this.map);
 
-      const overlays = {
-        Safety: safetyLayer,
-        Health: healthLayer,
-        Firefighters: fireLayer,
-        Info: infoLayer,
-      };
+  this.translate.get([
+    'soscat.Safety',
+    'soscat.Health',
+    'soscat.Firefighters',
+    'soscat.Info'
+  ]).subscribe(res => {
+    const overlays = {
+      [res['soscat.Safety']]: safetyLayer,
+      [res['soscat.Health']]: healthLayer,
+      [res['soscat.Firefighters']]: fireLayer,
+      [res['soscat.Info']]: infoLayer,
+    };
 
-      L.control.layers(undefined, overlays, {
-        position: 'bottomleft',
-        collapsed: false,
-      }).addTo(this.map);
-    }
+    L.control.layers(undefined, overlays, {
+      position: 'bottomleft',
+      collapsed: false,
+    }).addTo(this.map);
+  });
+}
+
 
     this.map.attributionControl.setPrefix(false);
     this.map.invalidateSize();
@@ -401,7 +430,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
 
   ngOnDestroy() {
     if (this.map) {
-      this.map.off(); // Remove listeners
+      this.map.off();
       this.map.remove();
     }
 

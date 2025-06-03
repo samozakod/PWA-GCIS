@@ -7,7 +7,7 @@
     "lang": "Language",
     "eng": "English",
     "spa": "Spanish",
-    "cat": "Catalan",
+    "bul": "Bulgarian",
     "dark": "Dark Mode",
     "about button": "About Us",
     "home": "Home",
@@ -18,6 +18,80 @@
     "desc": "An unofficial application made to help visitors during their stay. The code is open source."
   },
   "home": {
-    "welcome": "Welcome to Lloret's Companion App!"
+    "welcome": "Welcome to Lloret's Companion App!",
+    "banner":"Use this home page to take a peek at Lloret or use the rest of the tabs at the bottom tabs to see all that the town has to offer. Tap the ☰ button in the top-left corner to customize your experience.<br/>Enjoy your stay!"
+  },
+  "explore": {
+    "title": "Need a map?<br/>Choose whichever suits you best",
+    "geo":"Where am I?",
+    "poi":"What are Lloret's PoI?",
+    "gps":"How do I get there?",
+    "sos":"Where can I find help?"
+  },
+  "modal": {
+    "geo":"Geolocate Me",
+    "poi":"Points of Interest",
+    "gps":"Route Planner",
+    "sos":"Safe Spots"
+  },
+  "poi": {
+    "joan": "Sant Joan's Castle",
+    "plaja": "D'en Plaja Castle",
+    "puig": "Iberian Settlement of Puig de Castellet",
+    "angel": "The Angel's Monument",
+    "museum": "Maritime Museum",
+    "dona": "La Dona Marinera's Monument",
+    "center": "Historical Center",
+    "pere": "Sant Pere del Bosc",
+    "theater": "Lloret Theater",
+    "garden": "Santa Clotilde Gardens",
+    "water": "Water World Aqua Park",
+    "gnomo": "Gnomo Park",
+    "golf": "Mini Golf and Bowling",
+    "sould": "Sould Park",
+    "kart": "Karting Formula Lloret",
+    "buc": "Buc's Hill",
+    "cristina": "Santa Cristina Beach",
+    "boadella": "Sa Boadella Beach",
+    "central": "Central Beach",
+    "cany": "Canyelles Beach",
+    "fenals": "Fenals Beach",
+    "night": "Nightclub Zone",
+    "casino": "Gran Casino Costa Brava",
+    "elpub": "El Pub",
+    "stones": "The Stones Rock Pub",
+    "nags": "The Nags Head",
+    "wine": "Wine Palace Lloret",
+    "moli": "El Molí Sports Complex",
+    "swim": "Swimming and Racket Sports Facilities",
+    "track": "Track and Field Stadium",
+    "mun": "Municipal Sports Complex",
+    "pompeu": "Pompeu Fabra Arena",
+    "cruyff": "Cruyff Court",
+    "nautic": "Nautical Club Lloret",
+    "xtreme": "Lloret Water Xtreme"
+  },
+  "poicat": {
+  "Culture": "Culture",
+  "Nature": "Nature",
+  "Sports": "Sports",
+  "Entertainment": "Entertainment",
+  "Nightlife": "Nightlife"
+  },
+  "sos": {
+  "pol": "Local Police",
+  "moss": "Mossos d'Esquadra",
+  "cap": "CAP Lloret de Mar",
+  "hosp": "Blanes Hospital",
+  "fire": "Firefighters' Association",
+  "tour": "Tourism Office",
+  "hall": "Town Hall",
+  "bus": "Bus Station"
+  },
+  "soscat": {
+  "Safety": "Safety",
+  "Health": "Health",
+  "Firefighters": "Firefighters",
+  "Info": "Info"
   }
 }
