@@ -1,0 +1,24 @@
+{
+	"ui":{
+		"options": "Opciones",
+		"access": "Accessibilidad",
+		"accalert": "Accessibilidad",
+		"font": "Letra grande",
+		"lang": "Idioma",
+		"eng": "Inglés",
+		"spa": "Castellano",
+		"cat": "Catalán",
+		"dark": "Modo oscuro",
+		"about button": "Acerca de",
+		"home": "Inicio",
+		"explore": "Explora",
+		"enjoy": "Disfruta",
+		"get help": "Ayuda",
+		"close": "Cerrar",
+    	"desc": "Aplicación no oficial, diseñada para ayudar a los visitantes durante su estancia. El código es abierto."
+	},
+ 	 "home": {
+    	"welcome": "Bienvenido a Lloret Companion App!"
+	}
+}
+

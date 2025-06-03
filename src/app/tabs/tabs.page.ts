@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-tabs',
@@ -10,8 +11,9 @@ export class TabsPage implements OnInit {
 
   isDarkMode = false;
   isLargeFont = false;
+  selectedLanguage = 'en';
 
-  constructor() {}
+  constructor(private translate: TranslateService) {}
 
   ngOnInit() {
     const savedDark = localStorage.getItem('dark-mode');
@@ -22,6 +24,9 @@ export class TabsPage implements OnInit {
 
     this.setDarkMode(this.isDarkMode);
     this.setFontSize(this.isLargeFont);
+
+    this.selectedLanguage = localStorage.getItem('lang') || 'en';
+    this.translate.use(this.selectedLanguage);
   }
 
   toggleDarkMode(event: any) {
@@ -42,5 +47,11 @@ export class TabsPage implements OnInit {
 
   setFontSize(enableLarge: boolean) {
     document.body.classList.toggle('large-font', enableLarge);
+  }
+
+  changeLanguage(lang: string) {
+    this.selectedLanguage = lang;
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang);
   }
 }

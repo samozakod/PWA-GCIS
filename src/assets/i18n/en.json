@@ -1,0 +1,23 @@
+{
+  "ui": {
+    "options": "Options",
+    "access": "Accessibility",
+    "accalert": "Accessibility",
+    "font": "Large Font",
+    "lang": "Language",
+    "eng": "English",
+    "spa": "Spanish",
+    "cat": "Catalan",
+    "dark": "Dark Mode",
+    "about button": "About Us",
+    "home": "Home",
+    "explore": "Explore",
+    "enjoy": "Enjoy",
+    "get help": "Get Help",
+    "close": "Close",
+    "desc": "An unofficial application made to help visitors during their stay. The code is open source."
+  },
+  "home": {
+    "welcome": "Welcome to Lloret's Companion App!"
+  }
+}

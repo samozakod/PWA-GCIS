@@ -3,43 +3,43 @@
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="Home" href="/home">
       <ion-icon aria-hidden="true" name="home-sharp"></ion-icon>
-      <ion-label>Home</ion-label>
+      <ion-label>{{ 'ui.home' | translate }}</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="Explore" href="/pages/explore">
       <ion-icon aria-hidden="true" name="map-sharp"></ion-icon>
-      <ion-label>Explore</ion-label>
+      <ion-label>{{ 'ui.explore' | translate }}</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="Enjoy" href="/pages/entertain">
       <ion-icon aria-hidden="true" name="happy-sharp"></ion-icon>
-      <ion-label>Enjoy</ion-label>
+      <ion-label>{{ 'ui.enjoy' | translate }}</ion-label>
     </ion-tab-button>
 
     <ion-tab-button tab="Help" href="/pages/assist">
       <ion-icon aria-hidden="true" name="help-sharp"></ion-icon>
-      <ion-label>Get help</ion-label>
+      <ion-label>{{ 'ui.get help' | translate }}</ion-label>
     </ion-tab-button>
   </ion-tab-bar>
 
   <ion-menu contentId="main-content" swipeGesture="false">
     <ion-header>
       <ion-toolbar>
-        <ion-title>Options</ion-title>
+        <ion-title>{{ 'ui.options' | translate }}</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content class="ion-padding">
       <ion-list lines="inset">
 
         <ion-item id="accessibility" lines="bottom" style="cursor: pointer;">
-          Accessibility
+          {{ 'ui.access' | translate }}
           <ion-modal trigger="accessibility" cssClass="accessibility-modal">
             <ng-template>
               <ion-header>
                 <ion-toolbar>
-                  <ion-title>Accessibility</ion-title>
+                  <ion-title>{{ 'ui.accalert' | translate }}</ion-title>
                   <ion-buttons slot="end">
-                    <ion-button onclick="document.querySelector('ion-modal').dismiss()">Close</ion-button>
+                    <ion-button onclick="document.querySelector('ion-modal').dismiss()">{{ 'ui.close' | translate }}</ion-button>
                   </ion-buttons>
                 </ion-toolbar>
               </ion-header>
@@ -54,25 +54,27 @@
         </ion-item>
 
         <ion-item>
-          <ion-select label="Language" label-placement="floating">
-            <ion-select-option value="english">English</ion-select-option>
-            <ion-select-option value="spanish">Spanish</ion-select-option>
-            <ion-select-option value="catalan">Catalan</ion-select-option>
+          <ion-label>{{ 'ui.lang' | translate }}<br />
+          </ion-label>
+          <ion-select interface="popover" [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
+            <ion-select-option value="en">{{ 'ui.eng' | translate }}</ion-select-option>
+            <ion-select-option value="es">{{ 'ui.spa' | translate }}</ion-select-option>
+            <ion-select-option value="ca">{{ 'ui.cat' | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
 
         <ion-item>
-          <ion-label>Dark Mode</ion-label>
+          <ion-label>{{ 'ui.dark' | translate }}</ion-label>
           <ion-toggle slot="end" (ionChange)="toggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
         </ion-item>
 
         <ion-item id="about" lines="none" style="cursor: pointer;">
-          About Us
+          {{ 'ui.about button' | translate }}
           <ion-alert
             trigger="about"
-            header="Info"
-            message="Lorem Ipsum"
-            [buttons]="['Close']">
+            header="Lloret Companion App"
+            [message]="'ui.desc' | translate"
+            [buttons]="[('ui.close' | translate)]">
           </ion-alert>
         </ion-item>
 
