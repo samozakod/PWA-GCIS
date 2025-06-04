@@ -36,11 +36,16 @@
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 /* @import "@ionic/angular/css/palettes/dark.system.css"; */
 
-
+/*Light and Dark mode settings*/
 :root {
   --ion-background-color: #fff;
   --ion-text-color: #000;
-  /* light theme */
+  --assist-address-color: #000;
+  --assist-desc-color: #505050;
+  --category-sub-color: #505050;
+  --event-title-color: #242424;
+  --event-desc-color: #505050;
+
 }
 
 body.dark {
@@ -48,35 +53,41 @@ body.dark {
   --ion-text-color: #fff;
   --ion-item-background: #1e1e1e;
   --ion-border-color: #444;
-  /* dark theme */
+  --assist-address-color: #c4c4c4;
+  --assist-desc-color: #919191;
+  --category-sub-color: #c4c4c4;
+  --event-title-color: #787878;
+  --event-desc-color: #c4c4c4;
 }
 
-body.dark {
-  --ion-background-color: #121212;
-  --ion-item-background: #1e1e1e;
-  --ion-text-color: #ffffff;
-  --ion-border-color: #444;
-}
 
 body.dark .alert-radio-label {
-  color: #fff ; // Or a more subtle light tone like #f0f0f0
+  color: #fff ;
 }
 
 body.dark ion-alert {
   --background: #1e1e1e;
-  --color: #fff;
 }
 
-body.dark ion-alert .alert-title,
+body.dark ion-alert .alert-title{
+  color: #919191;
+}
+
 body.dark ion-alert .alert-message {
-  color: #fff ;
+  color: #c4c4c4 ;
 }
 
-ion-modal.map-modal {
-  height: 100% ;
-  --height: 100% ;
+/*perliedman's plugin scss tweak for visible text during dark mode */
+body.dark .leaflet-control-geocoder {
+  color: #000000;
 }
 
+/*Cordova's routing plugin scss tweak for visible text during dark mode */
+body.dark .leaflet-routing-container {
+color: #000000 !important;
+}
+
+/*Full-screen map modal style*/
 .map-modal {
   --height: 100% ;
   --width: 100% ;
@@ -86,6 +97,7 @@ ion-modal.map-modal {
   --overflow: hidden;
 }
 
+/*Font size increase toggle-related changes*/
 body.large-font {
   font-size: 1.125rem;
   transition: font-size 0.3s ease;
@@ -119,7 +131,6 @@ body.large-font ion-card-subtitle {
   font-size: 1.2rem;
 }
 
-/* Custom page-specific classes */
 body.large-font .explore-title,
 body.large-font .entertain-title,
 body.large-font .category-title,

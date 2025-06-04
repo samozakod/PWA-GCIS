@@ -18,21 +18,24 @@
     	"desc": "Aplicación no oficial, diseñada para ayudar a los visitantes durante su estancia. El código es abierto."
 	},
  	 "home": {
-    	"welcome": "Bienvenido a la aplicación asistencial de Lloret!",
+    	"welcome": "¡Bienvenido a la aplicación asistencial de Lloret!",
     	"banner": "Usa esta página de inicio para echar un vistazo a Lloret o usa las demás pestañas de la parte inferior para ver todo lo que ofrece la ciudad. Pulsa el botón ☰ en la esquina superior izquierda para personalizar tu experiencia.<br/>¡Disfruta de tu estancia!" 
 	},
   "explore": {
-    "title": "Necesitas un mapa?<br/>Elige el más adecuado",
-    "geo":"Dónde estoy?",
-    "poi":"Cuáles son los PDI?",
-    "gps":"Cómo llego hasta allí?",
-    "sos":"Dónde puedo encontrar ayuda?"
+    "title": "¿Necesitas un mapa?<br/>Elige el más adecuado",
+    "geo":"¿Dónde estoy?",
+    "poi":"¿Cuáles son los PDI?",
+    "gps":"¿Cómo llego hasta allí?",
+    "sos":"¿Dónde puedo encontrar ayuda?"
   },
   "modal": {
     "geo":"Geolocalízame",
     "poi":"Puntos de interés",
     "gps":"Planificador de ruta",
-    "sos":"Puntos seguros"
+    "sos":"Puntos seguros",
+    "searchPlaceholder": "Busca...",
+    "position":"Tu posición actual",
+    "error":"No se pudo determinar tu ubicación"
   },
   "poi": {
   "joan": "Castillo de Sant Joan",
@@ -71,6 +74,13 @@
   "nautic": "Club Náutico de Lloret",
   "xtreme": "Lloret Water Xtreme"
 },
+  "poicat": {
+  "Culture": "Cultura",
+  "Nature": "Naturaleza",
+  "Sports": "Deportes",
+  "Entertainment": "Entretenimiento",
+  "Nightlife": "Ocio nocturno"
+  },
 "sos": {
   "pol": "Policía Local",
   "moss": "Mossos de Esquadra",
@@ -86,7 +96,132 @@
   "Health": "Salud",
   "Firefighters": "Bomberos",
   "Info": "Información"
-}
+},
+  "entertain": {
+    "title": "¿Sin planes?<br/>¡Mira todo lo que te ofrece Lloret!"
+  },
+"title": {
+    "food": "Comida y Bebida",
+    "music": "Música en Vivo y Lugares para Fiestas",
+    "sports": "Deportes y Entretenimiento",
+    "trad": "Tradiciones",
+    "reg": "Bar Restaurante Las Regiones",
+    "kebab": "Beach Döner Kebab",
+    "banys": "Cocktail Bar Cala Banys",
+    "vaca": "La Vaca Echada",
+    "pizza": "Pizzería Anna",
+    "reno": "Restaurante El Reno",
+    "tequila": "Tequila 85",
+    "clon": "Festival Clon",
+    "latino": "Gran Cafè Latino",
+    "outdoor": "Festival de Verano al Aire Libre de Lloret",
+    "sttrop": "St. Trop'",
+    "tropics": "Tropics",
+    "basket": "Globasket",
+    "trail": "Lloretrail",
+    "handball": "Copa Lloret",
+    "mic": "MICFootball",
+    "padel": "Pádel y Tenis",
+    "paintball": "Paintball Aventura",
+    "rally": "Rally Lloret de Mar",
+    "gegants": "Els Gegants de Lloret",
+    "cristina": "Festival de Santa Cristina",
+    "pere": "Sant Pere del Bosc",
+    "roma": "Festival de Sant Romà"
+  },
+  "subtitle": {
+    "food": "Descubre la gastronomía y las bebidas variadas de Lloret",
+    "music": "¡Muévete! Ven al centro y empieza a bailar",
+    "sports": "Actividades físicas y eventos variados",
+    "trad": "Tradiciones y festivales locales"
+  },
+  "shortdesc": {
+    "reg": "¿Necesitas una comida abundante o un espresso rápido? ¡Las Regiones lo tiene todo!",
+    "kebab": "Ven a probar una selección de delicias orientales",
+    "banys": "Disfruta tu cóctel rodeado del majestuoso Mediterráneo",
+    "vaca": "Una parrilla argentina en el corazón del centro histórico de Lloret",
+    "pizza": "La comida rápida favorita del mundo, ¡ahora con un toque local!",
+    "reno": "¿Buscas alta cocina? Visita El Reno",
+    "tequila": "Un bar acogedor con una gran selección de licores",
+    "clon": "Revive los clásicos en un escenario junto al mar",
+    "latino": "El hogar de los ritmos del sur",
+    "outdoor": "¡Fuera techos! Es verano, después de todo",
+    "sttrop": "¿Te preguntas cómo es un club top 100? ¡Este es el lugar!",
+    "tropics": "¿No te basta con un top 100? Prueba un top 25",
+    "basket": "Torneo internacional de baloncesto",
+    "trail": "Reta tus límites en esta carrera entre la naturaleza",
+    "handball": "Apoya el creciente deporte del balonmano",
+    "mic": "El fútbol mundial en casa — ¡ven a verlo!",
+    "padel": "¿Te gustan los deportes de raqueta? ¡A jugar!",
+    "paintball": "¿Prefieres algo más extremo? ¡Únete al paintball!",
+    "rally": "Pisa a fondo y siente la emoción de la carrera",
+    "gegants": "Conoce esta tradición peculiar",
+    "cristina": "Una de las dos festividades patronales de Lloret",
+    "pere": "Un santuario en medio del bosque mediterráneo",
+    "roma": "La fiesta de otoño, con feria medieval incluida"
+  },
+  "longdesc": {
+    "reg": "Prueba platos tradicionales españoles: tapas, sangría y dulces típicos — todo en un ambiente acogedor.",
+    "kebab": "Ubicado cerca de la playa, ofrece platos del Medio Oriente, India y Pakistán.",
+    "banys": "Una cala escondida cerca de la playa principal. Ideal para disfrutar cócteles con vistas.",
+    "vaca": "Especializado en carne argentina asada. ¡Sabor y autenticidad garantizados!",
+    "pizza": "Pizzas caseras junto a hoteles del pueblo. Calidad y cantidad.",
+    "reno": "Alta cocina con menús temáticos. Es necesario reservar.",
+    "tequila": "Bar relajado ideal para adultos, con gran selección de bebidas.",
+    "clon": "Un homenaje a grandes músicos. Un viaje al pasado.",
+    "latino": "En el corazón de Lloret. ¡Siente la música y baila!",
+    "outdoor": "Música en los jardines de Fenals. Ideal para todas las edades.",
+    "sttrop": "Uno de los 100 mejores clubes del mundo. ¡Ven a la fiesta!",
+    "tropics": "Club top 25 mundial. DJs internacionales, buena música y ambiente eléctrico.",
+    "basket": "Torneo de baloncesto con equipos de todo el mundo.",
+    "trail": "Media maratón por los paisajes naturales de Lloret.",
+    "handball": "Gran torneo de balonmano durante Semana Santa.",
+    "mic": "Fútbol juvenil internacional. ¡Observa el talento en desarrollo!",
+    "padel": "Reserva tu pista de pádel o tenis a precios accesibles.",
+    "paintball": "Zona amplia y llena de obstáculos para acción de paintball.",
+    "rally": "Evento histórico con coches deportivos por las calles de Lloret.",
+    "gegants": "Tradición centenaria con figuras gigantes.",
+    "cristina": "Fiesta principal de verano: fuegos, música, drones y más.",
+    "pere": "Lugar histórico en el bosque, ideal para ceremonias.",
+    "roma": "Versión otoñal de la fiesta patronal. Incluye feria medieval."
+  },
+  "date": {
+    "clon": "Del 1 al 5 de julio",
+    "outdoor": "Del 18 al 23 de agosto",
+    "basket": "Del 13 al 17 de abril",
+    "trail": "13 de marzo",
+    "handball": "Cada Semana Santa",
+    "mic": "Del 27 al 31 de mayo",
+    "rally": "Del 7 al 9 de febrero",
+    "cristina": "24 de julio",
+    "roma": "18 de noviembre"
+  },
+   "helpname": {
+    "police": "Policía Local",
+    "mossos": "Mossos de Esquadra",
+    "fire": "Estación de Bomberos",
+    "cap": "Clínica de Salud Central de Lloret",
+    "hospital": "Hospital Comarcal de Blanes",
+    "hall": "Ayuntamiento",
+    "tourist": "Oficina de Información Turística",
+    "bus": "Estación de Autobuses",
+    "pharma": "Farmacias"
+  },
+  "helpdesc": {
+    "police": "La fuerza policial local del municipio. También se puede llamar al 092.",
+    "mossos": "Una sucursal local de la policía catalana.",
+    "fire": "La asociación local de bomberos del municipio.",
+    "cap": "Centro de salud central del municipio, adecuado para necesidades menores o primeros auxilios.",
+    "hospital": "El hospital más grande cercano. Cuenta con numerosos especialistas y equipo moderno.",
+    "hall": "Ayuntamiento de Lloret. Útil para trámites administrativos.",
+    "tourist": "Principal oficina de turismo del municipio, útil para recién llegados.",
+    "bus": "La estación principal de autobuses. Ofrece servicios e información sobre líneas a Barcelona y Girona.",
+    "pharma": "Un catálogo con información sobre las farmacias de Lloret, incluidas las de 24 horas."
+  },
+  "assist": {
+    "title": "¿Estás en peligro?",
+    "subtitle": "Llama ahora al número de emergencia universal:"
+  }
 }
 
 

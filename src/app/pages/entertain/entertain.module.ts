@@ -6,12 +6,13 @@ import { EntertainPage } from './entertain.page';
 
 import { EntertainPageRoutingModule } from './entertain-routing.module';
 
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    EntertainPageRoutingModule
+    EntertainPageRoutingModule,
   ],
 })
 export class EntertainPageModule {}

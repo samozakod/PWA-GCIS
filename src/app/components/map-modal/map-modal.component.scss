@@ -1,17 +1,11 @@
-.map-modal {
-  --height: 100% ;
-  --border-radius: 0 ;
-  --box-shadow: none ;
-}
-
+/*Avoid attribution overlap*/
 .leaflet-routing-container {
-  max-height: 200px; /* or whatever fits your modal */
+  max-height: 200px;
   overflow-y: auto;
   scrollbar-width: thin;
   padding-right: 8px;
 }
 
-/* Optional: Enable smooth scrolling */
 .leaflet-routing-container::-webkit-scrollbar {
   width: 6px;
 }

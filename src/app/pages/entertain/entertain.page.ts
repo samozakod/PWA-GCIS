@@ -2,13 +2,15 @@ import { IonicModule, AlertController } from '@ionic/angular';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 
 import eventData from 'src/assets/data/events.json';
 
 @Component({
   selector: 'app-entertain',
   standalone: true,
-  imports: [IonicModule, CommonModule, FormsModule],
+  imports: [IonicModule, CommonModule, FormsModule, TranslateModule],
   templateUrl: 'entertain.page.html',
   styleUrls: ['entertain.page.scss'],
 })
@@ -17,20 +19,17 @@ export class EntertainPage {
 
   constructor(
     private alertController: AlertController,
+    private translate: TranslateService
   ) {}
 
     async presentItemDetails(item: any) {
-  const message = `
-    ${item.largeImage ? `<img src="${item.largeImage}" style="width: 100%; height: auto; margin-bottom: 10px;">` : ''}
-    <p>${item.longDescription || item.description || ''}</p>
-  `;
-
-    const alert = await this.alertController.create({
-      header: item.title,
-      message: `${item.longDescription || item.description || ''}`,
-      buttons: ['Close']
-    });
-
-  await alert.present();
-}
+      const title = this.translate.instant(item.title);
+      const message = this.translate.instant(item.longDescription);
+      const alert = await this.alertController.create({
+        header: title,
+        message: message,
+        buttons: [this.translate.instant('ui.close')]
+      });
+      await alert.present();
+    }
 }

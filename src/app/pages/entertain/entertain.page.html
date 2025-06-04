@@ -1,9 +1,9 @@
 <ion-content>
-  <h2 class="entertain-title">Not sure what to do?<br/>See what Lloret has to offer!</h2>
+  <h2 class="entertain-title" [innerHTML]="'entertain.title' | translate"></h2>
     <ion-card *ngFor="let category of categories" class="category-card">
       <ion-card-header>
-        <ion-card-title class="category-title">{{ category.title }}</ion-card-title>
-        <ion-card-subtitle>{{ category.subtitle }}</ion-card-subtitle>
+        <ion-card-title class="category-title">{{ category.title | translate }}</ion-card-title>
+        <ion-card-subtitle class="category-subtitle">{{ category.subtitle | translate }}</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
@@ -18,12 +18,12 @@
 
           <div class="event-details">
             <div class="event-header">
-              <h3 class="event-title">{{ item.title }}</h3>
+              <h3 class="event-title">{{ item.title | translate }}</h3>
 
               <div class="right-info">
                 <span class="event-date" *ngIf="item.date">
                   <ion-icon name="calendar-outline"></ion-icon>
-                  {{ item.date }}
+                  {{ item.date | translate }}
                 </span>
                 <span class="event-location" *ngIf="item.location">
                   <ion-icon name="location-outline"></ion-icon>
@@ -44,7 +44,7 @@
             </div>
 
             <p class="event-description">
-              {{ item.shortDescription || item.description }}
+              {{ item.shortDescription | translate }}
             </p>
           </div>
         </div>

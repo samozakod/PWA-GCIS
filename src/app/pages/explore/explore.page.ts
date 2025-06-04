@@ -20,7 +20,7 @@ async openMap(mapType: string) {
     componentProps: { mapType },
     cssClass: 'map-modal',
     showBackdrop: true,
-    backdropDismiss: false,
+    backdropDismiss: true,
     handle: false,
   });
 

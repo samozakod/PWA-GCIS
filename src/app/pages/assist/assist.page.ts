@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import helpData from 'src/assets/data/helpTab.json';
 import { IonicModule } from '@ionic/angular'; 
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
+import helpData from 'src/assets/data/helpTab.json';
 @Component({
   selector: 'app-assist',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule],
+  imports: [CommonModule, FormsModule, IonicModule, TranslateModule],
   templateUrl: 'assist.page.html',
   styleUrls: ['assist.page.scss'],
 })

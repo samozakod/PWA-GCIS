@@ -1,72 +1,63 @@
 [
   {
-    "name": "Policia Local",
-    "description": "The town's local police force. Can also be called through 092.",
+    "name": "helpname.police",
+    "description": "helpdesc.police",
     "phone": "+972000000000000",
     "web": "https://www.lloret.cat/ca/seccions/policia-local",
     "address": "Avinguda de les Alegries, 32"
   },
-
   {
-    "name": "Mossos d'Esquadra",
-    "description": "A local branch of the Catalonian police force.",
+    "name": "helpname.mossos",
+    "description": "helpdesc.mossos",
     "phone": "+9724848484848484848",
     "web": "https://mossos.gencat.cat/en/inici/index.html",
     "address": "Carrer de Francesc Cambó, 43"
   },
-
   {
-    "name": "Parc de Bombers",
-    "description": "The town's local firefighters association.",
+    "name": "helpname.fire",
+    "description": "helpdesc.fire",
     "phone": "+9720151515151515",
     "web": "https://www.instagram.com/associacio_bombers_lloretdemar/",
     "address": "Carrer de Costa de Carbonell, 34"
   },
-
   {
-    "name": "CAP Lloret",
-    "description": "The town's central health center, suitable for minor/first-aid needs.",
+    "name": "helpname.cap",
+    "description": "helpdesc.cap",
     "phone": "+97201714141414141414",
     "web": "https://www.instagram.com/associacio_bombers_lloretdemar/",
     "address": "Carrer de Girona, 8"
   },
-
   {
-    "name": "Hospital Comarcal de Blanes",
-    "description": "The largest nearby hospital. It features a large number of specialists and modern equipment.",
+    "name": "helpname.hospital",
+    "description": "helpdesc.hospital",
     "phone": "+9720484831234423",
     "web": "https://www.redaccionmedica.com/recursos-salud/hospitales-espana/hospital-comarcal-de-blanes",
-    "address": "Carrer Accés Cala Sant Francesc, 5 (Located in the town of Blanes)"
+    "address": "Carrer Accés Cala Sant Francesc, 5 (Blanes)"
   },
-
   {
-    "name": "Ajuntament de Lloret",
-    "description": "Lloret's Town Hall. A great resource for administrative matters.",
+    "name": "helpname.hall",
+    "description": "helpdesc.hall",
     "phone": "+972450465405645",
     "web": "https://www.lloret.cat/ca/front-page",
     "address": "Plaça de la Vila, 1"
   },
-
   {
-    "name": "Central Tourist Information Office",
-    "description": "The town's main tourist information hub, helpful for newcomers to Lloret.",
+    "name": "helpname.tourist",
+    "description": "helpdesc.tourist",
     "phone": "+97201714141414141414",
-    "web": "https://https://lloretdemar.org/en/plan-your-trip/tourist-information-offices/",
+    "web": "https://lloretdemar.org/en/plan-your-trip/tourist-information-offices/",
     "address": "Avinguda de les Alegries, 3"
   },
-
   {
-    "name": "Terminal d'Autobusos",
-    "description": "The main bus station. Offers travel services and information, including bus lines to the main cities of Barcelona and Girona.",
+    "name": "helpname.bus",
+    "description": "helpdesc.bus",
     "phone": "+97214514512154156",
     "web": "https://professionals.lloretdemar.org/en/tourism-products/lloret-film-office/urban-landscape/bus-station/bus-station-lloret/",
     "address": "Avinguda Vila de Blanes, 37"
   },
-
   {
-    "name": "Pharmacies",
-    "description": "A catalogue featuring information about Lloret's Pharmacies, including a list of the 24-hour ones.",
+    "name": "helpname.pharma",
+    "description": "helpdesc.pharma",
     "web": "https://www.lloret.cat/ca/el-municipi/serveis/planol-farmacies"
   }
-  
 ]

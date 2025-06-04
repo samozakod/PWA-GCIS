@@ -116,7 +116,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
     //perliedman geocoder search plugin implementation
     const geocoder = (L.Control as any).geocoder({
         defaultMarkGeocode: false,
-        placeholder: 'Search location...',
+        placeholder: this.translate.instant('modal.searchPlaceholder'),
         collapsed: true,
         position: 'topleft',
       }).on('markgeocode', (e: any) => {
@@ -150,10 +150,10 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
 
           L.marker([lat, lng], { icon: userIcon })
             .addTo(this.map)
-            .bindPopup('You are here')
+            .bindPopup(this.translate.instant('modal.position'))
             .openPopup();
         }).catch((error) => {
-          alert('Unable to retrieve your location.');
+          alert(this.translate.instant('modal.error'));
           console.error(error);
         });
       }
@@ -243,13 +243,12 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
       Nightlife: 'purple',
     };
 
-    // Create a label with a color square for the control
-    const color = categoryColors[category] || 'gray';
-    const label = `<span style="display:inline-block;width:12px;height:12px;margin-right:6px;
-    background-color:${color};border-radius:50%;"></span>${category}`;
+        
 
     this.translate.get(`poicat.${category}`).subscribe((translated) => {
-      const label = `<span style="..."></span>${translated}`;
+    const color = categoryColors[category] || 'gray';
+    const label = `<span style="display:inline-block;width:12px;height:12px;margin-right:6px;
+    background-color:${color};border-radius:50%;"></span>${translated}`;
       overlays[label] = layerGroup;
     });
     layerGroup.addTo(this.map);
