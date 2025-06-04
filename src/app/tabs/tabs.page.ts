@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,8 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['tabs.page.scss'],
   standalone: false,
 })
-export class TabsPage implements OnInit {
+export class TabsPage implements OnInit, AfterViewInit {
 
+  /*Variable declaration for option storage and propagation*/
   isDarkMode = false;
   isLargeFont = false;
   selectedLanguage = 'en';
@@ -16,6 +17,7 @@ export class TabsPage implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit() {
+    /*Logic and values to be followed on app launch*/
     const savedDark = localStorage.getItem('dark-mode');
     const savedFont = localStorage.getItem('large-font');
 
@@ -27,8 +29,18 @@ export class TabsPage implements OnInit {
 
     this.selectedLanguage = localStorage.getItem('lang') || 'en';
     this.translate.use(this.selectedLanguage);
+
+   
   }
 
+  /*Function to offset an error leading to sometimes having an empty language field on launch*/
+   ngAfterViewInit() {
+    const storedLang = localStorage.getItem('lang') || 'en';
+    this.selectedLanguage = storedLang;
+    this.translate.use(storedLang);
+  }
+
+  /*Dark mode functions*/
   toggleDarkMode(event: any) {
     this.isDarkMode = event.detail.checked;
     this.setDarkMode(this.isDarkMode);
@@ -39,6 +51,7 @@ export class TabsPage implements OnInit {
     document.body.classList.toggle('dark', shouldAdd);
   }
 
+  /*Large Font functions*/
   toggleFontSize(event: any) {
     this.isLargeFont = event.detail.checked;
     this.setFontSize(this.isLargeFont);
@@ -49,6 +62,7 @@ export class TabsPage implements OnInit {
     document.body.classList.toggle('large-font', enableLarge);
   }
 
+  /*Localization function*/
   changeLanguage(lang: string) {
     this.selectedLanguage = lang;
     this.translate.use(lang);

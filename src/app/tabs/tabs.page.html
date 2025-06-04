@@ -1,5 +1,5 @@
 <ion-tabs>
-
+<!-- Tab bar containing the app's main features -->
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="Home" href="/home">
       <ion-icon aria-hidden="true" name="home-sharp"></ion-icon>
@@ -22,7 +22,8 @@
     </ion-tab-button>
   </ion-tab-bar>
 
-  <ion-menu contentId="main-content" swipeGesture="false">
+  <!-- Side menu, selectable only through its button -->
+  <ion-menu contentId="side-menu" swipeGesture="false">
     <ion-header>
       <ion-toolbar>
         <ion-title>{{ 'ui.options' | translate }}</ion-title>
@@ -31,6 +32,7 @@
     <ion-content class="ion-padding">
       <ion-list lines="inset">
 
+        <!-- Inline modal for the Accessibility option menu -->
         <ion-item id="accessibility" lines="bottom" style="cursor: pointer;">
           {{ 'ui.access' | translate }}
           <ion-modal trigger="accessibility" cssClass="accessibility-modal">
@@ -44,7 +46,7 @@
                 </ion-toolbar>
               </ion-header>
               <ion-content class="ion-padding">
-                <ion-item>
+                <ion-item lines="none">
                   <ion-label>{{ 'ui.font' | translate }}</ion-label>
                   <ion-toggle slot="end" (ionChange)="toggleFontSize($event)" [checked]="isLargeFont"></ion-toggle>
                 </ion-item>
@@ -53,21 +55,24 @@
           </ion-modal>
         </ion-item>
 
+        <!-- Language selection option -->
         <ion-item>
           <ion-label>{{ 'ui.lang' | translate }}<br />
           </ion-label>
-          <ion-select interface="popover" [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event.detail.value)">
+          <ion-select interface="popover" [(ngModel)]="selectedLanguage" (ngModelChange)="changeLanguage($event)">
             <ion-select-option value="en">{{ 'ui.eng' | translate }}</ion-select-option>
             <ion-select-option value="es">{{ 'ui.spa' | translate }}</ion-select-option>
             <ion-select-option value="bg">{{ 'ui.bul' | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
 
+        <!-- Light-Dark mode toggle -->
         <ion-item>
           <ion-label>{{ 'ui.dark' | translate }}</ion-label>
           <ion-toggle slot="end" (ionChange)="toggleDarkMode($event)" [checked]="isDarkMode"></ion-toggle>
         </ion-item>
 
+        <!-- 'About' information alert -->
         <ion-item id="about" lines="none" style="cursor: pointer;">
           {{ 'ui.about button' | translate }}
           <ion-alert
@@ -81,8 +86,7 @@
       </ion-list>
     </ion-content>
   </ion-menu>
-
-  <ion-header id="main-content">
+  <ion-header id="side-menu">
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>

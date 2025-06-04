@@ -1,26 +1,9 @@
-body.large-font {
-  font-size: 1.125rem;
-}
-
-body.large-font ion-label,
-body.large-font ion-button,
-body.large-font ion-title,
-body.large-font ion-select,
-body.large-font ion-item {
-  font-size: 1.125rem;
-}
-
+/*Accessibility modal styling*/
 ion-modal.accessibility-modal {
   --width: 300px;
-  --height: 300px;
-  --border-radius: 16px;
+  --height: 150px;
   --box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  align-items: center;
-  justify-content: center;
+  --align-items: center;
+  --justify-content: center;
   --background: var(--ion-background-color);
 }
-
-ion-modal.accessibility-modal ion-content {
-  border-radius: 16px;
-}
-

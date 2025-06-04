@@ -1,3 +1,4 @@
+/*General styling*/
 ion-content {
   --padding-top: 10px;
   --padding-bottom: 10px;
@@ -7,6 +8,16 @@ ion-card.category-card {
   margin: 10px;
 }
 
+/*Page title styling*/
+.entertain-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #017E6E;
+}
+
+ /*Category class elements styling*/
 .category-title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -17,14 +28,8 @@ ion-card.category-card {
   color: var(--category-sub-color);
 }
 
-.entertain-title {
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #017E6E;
-}
 
+/*Card class elements styling*/
 .event-card {
   display: flex;
   gap: 12px;

@@ -1,7 +1,4 @@
-:host {
-  --ion-color-primary: #017E6E; // overrides default Ionic "primary" color
-}
-
+/*General styling, including page alignment and the buttons' containers*/
 .explore-content {
   display: flex;
   align-items: center;
@@ -28,8 +25,8 @@ ion-col {
 }
 
 ion-button {
-  white-space: normal ;  
-  height: auto ;         
+  white-space: normal;  
+  height: auto;         
   min-height: 70px;                
   display: flex;
   align-items: center;

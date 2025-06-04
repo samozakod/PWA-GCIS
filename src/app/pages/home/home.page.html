@@ -1,17 +1,17 @@
 <ion-content [fullscreen]="false">
   <div class="homepage-wrapper">
 
-    <!-- Welcome -->
+    <!-- Welcome message -->
     <h1 class="welcome-text">{{ 'home.welcome' | translate }}</h1>
 
-    <!-- Intro Info -->
+    <!-- Welcome subtitle paragraph -->
     <div class="info-box" [innerHTML]="'home.banner' | translate">
     </div>
 
-    <!-- Main Content -->
+    <!-- Widget section -->
     <div class="content-section">
       
-      <!-- Weather Section -->
+      <!-- Meteocat widget implementation -->
       <div class="weather-widget">
         <!-- FAB Button -->
         <ion-fab slot="fixed" vertical="top" horizontal="start" class="fab-wrapper">
@@ -34,7 +34,7 @@
           </ion-fab-list>
         </ion-fab>
 
-        <!-- Iframes -->
+        
         <div class="iframe-box scrollable-frame">
           <iframe *ngIf="currentFrame === 1"
             src="https://static-m.meteo.cat/ginys/municipal8d?location=170950&language=en&color=017E6E&tempFormat=ºC&target=_blank"
@@ -54,7 +54,7 @@
         </div>
       </div>
 
-      <!-- Instagram Embed -->
+      <!-- Instagram embed implementation -->
       <ion-card class="insta-card">
         <ion-card-content>
           <iframe 
@@ -65,7 +65,7 @@
         </ion-card-content>
       </ion-card>
 
-       <!-- LiveCam Card at the bottom -->
+       <!-- Livecam implementation -->
       <ion-card class="livecam-card">
         <ion-card-content>
           <div class="iframe-box">

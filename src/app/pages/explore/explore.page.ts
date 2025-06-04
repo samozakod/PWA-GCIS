@@ -14,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ExplorePage {
   constructor(private modalCtrl: ModalController) {}
 
+/*Modal loading depending on the map type associated with the selected button*/
 async openMap(mapType: string) {
   const modal = await this.modalCtrl.create({
     component: MapModalComponent,

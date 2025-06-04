@@ -17,6 +17,7 @@ export class AssistPage implements OnInit {
 
   constructor() {}
 
+  /*Data parsing and telephone call function implementation*/
   ngOnInit() {
     this.contacts = helpData;
   }

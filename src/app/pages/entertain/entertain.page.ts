@@ -22,6 +22,7 @@ export class EntertainPage {
     private translate: TranslateService
   ) {}
 
+    /*Parsed data translation and alert implementation, for on-click item behaviour*/
     async presentItemDetails(item: any) {
       const title = this.translate.instant(item.title);
       const message = this.translate.instant(item.longDescription);

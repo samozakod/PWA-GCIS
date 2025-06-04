@@ -6,6 +6,7 @@ import { trigger, transition, style, animate} from '@angular/animations';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: false,
+  /*FAB button animations*/
   animations: [
     trigger('fadeIn', [
       transition(':enter', [
@@ -16,6 +17,7 @@ import { trigger, transition, style, animate} from '@angular/animations';
   ]
 })
 export class HomePage {
+  /*Remember weather map position*/
   currentFrame = 1;
   setFrame(index: number) {
     this.currentFrame = index;

@@ -18,6 +18,7 @@ import { TranslateService } from '@ngx-translate/core';
   standalone: false,
 })
 export class MapModalComponent implements AfterViewInit, OnDestroy {
+  //Loading of the string data to be used in the maps
   @Input() mapType!: string;
   map: any;
   pois: any[] = [];
@@ -38,6 +39,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
     }, 300);
   }
 
+  //Preparing parsing for the localization support
   setTranslatedTitle() {
   const mapTypeToKey: { [key: string]: string } = {
     'Geolocate Me': 'geo',
@@ -46,8 +48,9 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
     'Safe Points': 'sos',
   };
 
-  const key = mapTypeToKey[this.mapType];
 
+  //Correct display of the localized title
+  const key = mapTypeToKey[this.mapType];
   this.translate.get('modal.' + key).subscribe((res: string) => {
     this.translatedTitle = res;
   });
@@ -55,6 +58,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
 
 
   initMap() {
+    //Map display is purposely limited to a certain geographic scope and zoom levels
     this.map = L.map('leaflet-map').setView([41.6988, 2.844], 20).fitBounds([
       [41.688, 2.8],
       [41.71, 2.9],
@@ -134,14 +138,15 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
 
     L.control.layers(baseLayers, undefined, { position: 'topright' }).addTo(this.map);
 
-    // --- MapType logic ---
-          if (this.mapType === 'Geolocate Me') {
+        //Start of the map type logic control
+        if (this.mapType === 'Geolocate Me') {
         const userIcon = L.icon({
           iconUrl: 'assets/icon/start.png',
           iconSize: [30, 30],
           iconAnchor: [15, 30],
         });
 
+        //Usage of Cordova's geolocation function instead of leaflet's one, due to more consistent results
         this.geolocation.getCurrentPosition().then((resp) => {
           const lat = resp.coords.latitude;
           const lng = resp.coords.longitude;
@@ -152,7 +157,8 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
             .addTo(this.map)
             .bindPopup(this.translate.instant('modal.position'))
             .openPopup();
-        }).catch((error) => {
+        }).catch((error) => { 
+          //Alert message to inform the user that there's been an error
           alert(this.translate.instant('modal.error'));
           console.error(error);
         });
@@ -160,106 +166,108 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
 
 
     else if (this.mapType === 'Points of Interest') {
-  const poiDataParsed = (poiData as any).default;
+      const poiDataParsed = (poiData as any).default;
 
-  const icons: any = {
-    gold: new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    }),
-    green: new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    }),
-    blue: new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    }),
-    red: new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    }),
-    violet: new L.Icon({
-      iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
-      shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-      shadowSize: [41, 41],
-    }),
-  };
+      //Declaration of the custom marker icons from pointhi's repository 
+      const icons: any = {
+        gold: new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        }),
+        green: new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-green.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        }),
+        blue: new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        }),
+        red: new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-red.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        }),
+        violet: new L.Icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-violet.png',
+          shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
+          iconSize: [25, 41],
+          iconAnchor: [12, 41],
+          popupAnchor: [1, -34],
+          shadowSize: [41, 41],
+        }),
+      };
 
-  const overlays: any = {};
+      const overlays: any = {};
 
-  for (const category in poiDataParsed) {
-    const groupItems = poiDataParsed[category];
-    const layerItems: L.Layer[] = [];
+      //Setup for the different types of map objects and their popup messages
+      for (const category in poiDataParsed) {
+        const groupItems = poiDataParsed[category];
+        const layerItems: L.Layer[] = [];
 
-    for (const item of groupItems) {
-      if (item.type === 'marker') {
-        const marker = L.marker([item.lat, item.lng], {
-          icon: icons[item.icon] || icons.orange,
-        }).bindPopup(this.translate.instant(item.popup));
-        layerItems.push(marker);
-      } else if (item.type === 'circle') {
-        const circle = L.circle([item.lat, item.lng], {
-          radius: item.radius,
-          color: item.color,
-          fillColor: item.fillColor,
-          fillOpacity: 0.5,
-        }).bindPopup(this.translate.instant(item.popup));
-        layerItems.push(circle);
-      } else if (item.type === 'polygon') {
-        const polygon = L.polygon(item.coords, {
-          color: item.color,
-        }).bindPopup(this.translate.instant(item.popup));
-        layerItems.push(polygon);
-      }
-    }
+        for (const item of groupItems) {
+          if (item.type === 'marker') {
+            const marker = L.marker([item.lat, item.lng], {
+              icon: icons[item.icon] || icons.orange,
+            }).bindPopup(this.translate.instant(item.popup));
+            layerItems.push(marker);
+          } else if (item.type === 'circle') {
+            const circle = L.circle([item.lat, item.lng], {
+              radius: item.radius,
+              color: item.color,
+              fillColor: item.fillColor,
+              fillOpacity: 0.5,
+            }).bindPopup(this.translate.instant(item.popup));
+            layerItems.push(circle);
+          } else if (item.type === 'polygon') {
+            const polygon = L.polygon(item.coords, {
+              color: item.color,
+            }).bindPopup(this.translate.instant(item.popup));
+            layerItems.push(polygon);
+          }
+        }
 
-    const layerGroup = L.layerGroup(layerItems);
+        const layerGroup = L.layerGroup(layerItems);
         // Define category colors for labels
-    const categoryColors: any = {
-      Culture: 'gold',
-      Nature: 'green',
-      Sports: 'blue',
-      Entertainment: 'red',
-      Nightlife: 'purple',
-    };
+        const categoryColors: any = {
+          Culture: 'gold',
+          Nature: 'green',
+          Sports: 'blue',
+          Entertainment: 'red',
+          Nightlife: 'purple',
+        };
 
-        
+            
+        //Creation of a custom category panel, with translated labels and colored symbology 
+        this.translate.get(`poicat.${category}`).subscribe((translated) => {
+        const color = categoryColors[category] || 'gray';
+        const label = `<span style="display:inline-block;width:12px;height:12px;margin-right:6px;
+        background-color:${color};border-radius:50%;"></span>${translated}`;
+          overlays[label] = layerGroup;
+        });
+        layerGroup.addTo(this.map);
+      }
 
-    this.translate.get(`poicat.${category}`).subscribe((translated) => {
-    const color = categoryColors[category] || 'gray';
-    const label = `<span style="display:inline-block;width:12px;height:12px;margin-right:6px;
-    background-color:${color};border-radius:50%;"></span>${translated}`;
-      overlays[label] = layerGroup;
-    });
-    layerGroup.addTo(this.map);
-  }
-
-  L.control.layers(undefined, overlays, {
-    position: 'bottomleft',
-    collapsed: false,
-  }).addTo(this.map);
-}
-
+      L.control.layers(undefined, overlays, {
+        position: 'bottomleft',
+        collapsed: false,
+      }).addTo(this.map);
+    }
+          //Cordova's routing plugin implementation, based on the code from DS, and featuring visual modifications, as well as a reset function
           else if (this.mapType === 'Path Guide') {
             let startPoint: L.LatLng | null = null;
             let endPoint: L.LatLng | null = null;
@@ -288,6 +296,7 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
             this.map.on('click', (e: any) => {
               const clickedLatLng = e.latlng;
 
+              //When both start and destination are present, clicking the map with reset the route
               if (startPoint && endPoint) {
                 resetRoute();
                 return;
@@ -347,76 +356,74 @@ export class MapModalComponent implements AfterViewInit, OnDestroy {
           }
 
 
+            else if (this.mapType === 'Safe Points') {
+          const sosDataParsed = (sosData as any).default;
+          //Declaration of the icons to be used, obtained through royalty-free sources 
+          const icons: any = {
+            police: new L.Icon({
+              iconUrl: 'assets/icon/police.png',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+            }),
+            fire: new L.Icon({
+              iconUrl: 'assets/icon/fire.png',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+            }),
+            hospital: new L.Icon({
+              iconUrl: 'assets/icon/hospital.png',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+            }),
+            info: new L.Icon({
+              iconUrl: 'assets/icon/info.png',
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+            }),
+          };
 
+          const makeMarkers = (items: any[], iconKey: string) =>
+            L.layerGroup(
+              items.map((m: any) =>
+                L.marker([m.lat, m.lng], {
+                  icon: icons[m.icon] || icons[iconKey],
+                }).bindPopup(this.translate.instant(m.popup))
+              )
+            );
 
-    else if (this.mapType === 'Safe Points') {
-  const sosDataParsed = (sosData as any).default;
+          const safetyLayer = makeMarkers(sosDataParsed.safety, 'police');
+          const healthLayer = makeMarkers(sosDataParsed.health, 'hospital');
+          const fireLayer = makeMarkers(sosDataParsed.firefighters, 'fire');
+          const infoLayer = makeMarkers(sosDataParsed.info, 'info');
 
-  const icons: any = {
-    police: new L.Icon({
-      iconUrl: 'assets/icon/police.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    }),
-    fire: new L.Icon({
-      iconUrl: 'assets/icon/fire.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    }),
-    hospital: new L.Icon({
-      iconUrl: 'assets/icon/hospital.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    }),
-    info: new L.Icon({
-      iconUrl: 'assets/icon/info.png',
-      iconSize: [25, 41],
-      iconAnchor: [12, 41],
-      popupAnchor: [1, -34],
-    }),
-  };
+          safetyLayer.addTo(this.map);
+          healthLayer.addTo(this.map);
+          fireLayer.addTo(this.map);
+          infoLayer.addTo(this.map);
 
-  const makeMarkers = (items: any[], iconKey: string) =>
-    L.layerGroup(
-      items.map((m: any) =>
-        L.marker([m.lat, m.lng], {
-          icon: icons[m.icon] || icons[iconKey],
-        }).bindPopup(this.translate.instant(m.popup))
-      )
-    );
+          this.translate.get([
+            'soscat.Safety',
+            'soscat.Health',
+            'soscat.Firefighters',
+            'soscat.Info'
+          ]).subscribe(res => {
+            const overlays = {
+              [res['soscat.Safety']]: safetyLayer,
+              [res['soscat.Health']]: healthLayer,
+              [res['soscat.Firefighters']]: fireLayer,
+              [res['soscat.Info']]: infoLayer,
+            };
 
-  const safetyLayer = makeMarkers(sosDataParsed.safety, 'police');
-  const healthLayer = makeMarkers(sosDataParsed.health, 'hospital');
-  const fireLayer = makeMarkers(sosDataParsed.firefighters, 'fire');
-  const infoLayer = makeMarkers(sosDataParsed.info, 'info');
-
-  safetyLayer.addTo(this.map);
-  healthLayer.addTo(this.map);
-  fireLayer.addTo(this.map);
-  infoLayer.addTo(this.map);
-
-  this.translate.get([
-    'soscat.Safety',
-    'soscat.Health',
-    'soscat.Firefighters',
-    'soscat.Info'
-  ]).subscribe(res => {
-    const overlays = {
-      [res['soscat.Safety']]: safetyLayer,
-      [res['soscat.Health']]: healthLayer,
-      [res['soscat.Firefighters']]: fireLayer,
-      [res['soscat.Info']]: infoLayer,
-    };
-
-    L.control.layers(undefined, overlays, {
-      position: 'bottomleft',
-      collapsed: false,
-    }).addTo(this.map);
-  });
-}
+            L.control.layers(undefined, overlays, {
+              position: 'bottomleft',
+              collapsed: false,
+            }).addTo(this.map);
+          });
+        }
 
 
     this.map.attributionControl.setPrefix(false);
