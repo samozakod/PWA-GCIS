@@ -20,20 +20,28 @@
   color: #017E6E;
 }
 
+ion-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
 ion-col {
+  display: flex;
   padding: 8px;
 }
 
 ion-button {
   white-space: normal;  
-  height: auto;         
-  min-height: 70px;                
+  height: 100%;   
+  width: 100%;      
+  min-height: 80px;                
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 16px;                 
-  padding: 12px;
+  font-size: 1rem;                 
+  padding: 16px;
   line-height: 1.4;
 }
 

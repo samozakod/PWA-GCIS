@@ -134,3 +134,17 @@ ion-card.category-card {
   justify-content: center;
 }
 
+/*Angular media breakpoint to ensure the correct visualization on low-resolution devices*/
+@media (max-width: 635px) {
+  .scrollable {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    white-space: nowrap;
+  }
+
+  .event-card {
+    min-width: 350px;
+    display: inline-block;
+  }
+}

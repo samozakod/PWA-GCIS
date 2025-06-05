@@ -9,7 +9,7 @@
     "spa": "Spanish",
     "bul": "Bulgarian",
     "dark": "Dark Mode",
-    "about button": "About Us",
+    "about button": "About",
     "home": "Home",
     "explore": "Explore",
     "enjoy": "Enjoy",
@@ -18,7 +18,7 @@
     "desc": "An unofficial application made to help visitors during their stay. The code is open source."
   },
   "home": {
-    "welcome": "Welcome to Lloret Companion App!",
+    "welcome": "Welcome to the Lloret Companion App!",
     "banner":"Use this home page to take a peek at Lloret or use the rest of the tabs at the bottom tabs to see all that the town has to offer. Tap the ☰ button in the top-left corner to customize your experience.<br/>Enjoy your stay!"
   },
   "explore": {

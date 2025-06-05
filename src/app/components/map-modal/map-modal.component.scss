@@ -13,3 +13,15 @@
   background: #888;
   border-radius: 3px;
 }
+
+:host ::ng-deep .leaflet-control-attribution {
+  max-width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+:host ::ng-deep .leaflet-control-attribution:hover {
+  max-width: 100%;
+}
