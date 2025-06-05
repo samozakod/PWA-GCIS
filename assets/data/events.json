@@ -1,0 +1,220 @@
+{
+  "categories": [
+    {
+      "title": "title.food",
+      "subtitle": "subtitle.food",
+      "items": [
+        {
+          "title": "title.reg",
+          "image": "assets/images/regiones.jpg",
+          "shortDescription": "shortdesc.reg",
+          "longDescription": "longdesc.reg",
+          "location": "Av. de les Regions, 12",
+          "url": "https://www.lasregiones.net/"
+        },
+        {
+          "title": "title.kebab",
+          "image": "assets/images/kebab.jpg",
+          "shortDescription": "shortdesc.kebab",
+          "longDescription": "longdesc.kebab",
+          "location": "Passeig d'Agustí Font, 3",
+          "url": "https://glovoapp.com/es/es/lloret-de-mar/beach-doner-kebab-lloret-del-mar/"
+        },
+        {
+          "title": "title.banys",
+          "image": "assets/images/banys.jpg",
+          "shortDescription": "shortdesc.banys",
+          "longDescription": "longdesc.banys",
+          "location": "Cala Banys",
+          "url": "https://www.visitacostabrava.com/es/lloret-de-mar/cocktail-bar-cala-banys"
+        },
+        {
+          "title": "title.vaca",
+          "image": "assets/images/vaca.jpg",
+          "shortDescription": "shortdesc.vaca",
+          "longDescription": "longdesc.vaca",
+          "location": "Carrer Sant Romà, 9",
+          "url": "https://guiacat.cat/es/restaurante/vaca-echada-lloret-mar"
+        },
+        {
+          "title": "title.pizza",
+          "image": "assets/images/pizza.jpg",
+          "shortDescription": "shortdesc.pizza",
+          "longDescription": "longdesc.pizza",
+          "location": "Carrer de Josep Anselm Clavé, 10",
+          "url": "https://glovoapp.com/es/es/lloret-de-mar/pizzer-a-l-anna-lloret-del-mar/"
+        },
+        {
+          "title": "title.reno",
+          "image": "assets/images/reno.jpg",
+          "shortDescription": "shortdesc.reno",
+          "longDescription": "longdesc.reno",
+          "location": "Camí de Lloret",
+          "url": "https://elrenolloret.com/"
+        },
+        {
+          "title": "title.tequila",
+          "image": "assets/images/tequila.jpg",
+          "shortDescription": "shortdesc.tequila",
+          "longDescription": "longdesc.tequila",
+          "location": "Carrer de Josep de Togores, 17",
+          "url": "https://gastroranking.es/r/tequila-85-shisha-bar_242730/"
+        }
+      ]
+    },
+
+    {
+      "title": "title.music",
+      "subtitle": "subtitle.music",
+      "items": [
+        {
+          "title": "title.clon",
+          "image": "assets/images/clon.jpg",
+          "shortDescription": "shortdesc.clon",
+          "longDescription": "longdesc.clon",
+          "date": "date.clon",
+          "location": "La Roca d'en Maig",
+          "url": "https://lloretdemar.org/en/Agenda/clon-festival/"
+        },
+        {
+          "title": "title.latino",
+          "image": "assets/images/latino.jpg",
+          "shortDescription": "shortdesc.latino",
+          "longDescription": "longdesc.latino",
+          "location": "Rambla de Romà Barnés, 10",
+          "url": "https://somcostabrava.com/es/entretenimiento/grand-cafe-latino"
+        },
+        {
+          "title": "title.outdoor",
+          "image": "assets/images/outdoor.jpg",
+          "shortDescription": "shortdesc.outdoor",
+          "longDescription": "longdesc.outdoor",
+          "date": "date.outdoor",
+          "location": "Passeig Jardins, s/n",
+          "url": "https://lloretdemar.org/en/activity/lloret-outdoor-summer-festival/"
+        },
+        {
+          "title": "title.sttrop",
+          "image": "assets/images/sttrop.jpg",
+          "shortDescription": "shortdesc.sttrop",
+          "longDescription": "longdesc.sttrop",
+          "location": "Carrer Baix de la Riera, 16",
+          "url": "https://www.sttrop.com/"
+        },
+        {
+          "title": "title.tropics",
+          "image": "assets/images/tropics.jpg",
+          "shortDescription": "shortdesc.tropics",
+          "longDescription": "longdesc.tropics",
+          "location": "Av. Just Marlés Vilarrodona, 49",
+          "url": "https://www.discotropics.com/en/"
+        }
+      ]
+    },
+
+    {
+      "title": "title.sports",
+      "subtitle": "subtitle.sports",
+      "items": [
+        {
+          "title": "title.basket",
+          "image": "assets/images/basket.jpg",
+          "shortDescription": "shortdesc.basket",
+          "longDescription": "longdesc.basket",
+          "date": "date.basket",
+          "location": "Carrer de Sant Roc, 10",
+          "url": "https://globasket.com/globasket-2025/"
+        },
+        {
+          "title": "title.trail",
+          "image": "assets/images/trail.jpg",
+          "shortDescription": "shortdesc.trail",
+          "longDescription": "longdesc.trail",
+          "date": "date.trail",
+          "url": "https://lloretdemar.org/en/Agenda/lloret-trail-en/"
+        },
+        {
+          "title": "title.handball",
+          "image": "assets/images/handball.jpg",
+          "shortDescription": "shortdesc.handball",
+          "longDescription": "longdesc.handball",
+          "date": "date.handball",
+          "location": "Carrer Senyora de Rossell, 12",
+          "url": "https://lloretcup.com/"
+        },
+        {
+          "title": "title.mic",
+          "image": "assets/images/football.jpg",
+          "shortDescription": "shortdesc.mic",
+          "longDescription": "longdesc.mic",
+          "date": "date.mic",
+          "location": "Carrer dels Mestres, s/n",
+          "url": "https://micfootball.com/sedes/"
+        },
+        {
+          "title": "title.padel",
+          "image": "assets/images/padel.jpg",
+          "shortDescription": "shortdesc.padel",
+          "longDescription": "longdesc.padel",
+          "location": "Av. del Rieral, 22",
+          "url": "https://www.piscinalloret.cat/en/services-activities/book-padel-and-tennis"
+        },
+        {
+          "title": "title.paintball",
+          "image": "assets/images/paintball.jpg",
+          "shortDescription": "shortdesc.paintball",
+          "longDescription": "longdesc.paintball",
+          "location": "Av. de Les Alegries, 97",
+          "url": "https://adventure.lloretdemar.org/es/actividades/paintballaventura"
+        },
+        {
+          "title": "title.rally",
+          "image": "assets/images/rally.jpg",
+          "shortDescription": "shortdesc.rally",
+          "longDescription": "longdesc.rally",
+          "date": "date.rally",
+          "url": "https://www.vlineorg.com/en/rally-lloret-de-mar/"
+        }
+      ]
+    },
+
+    {
+      "title": "title.trad",
+      "subtitle": "subtitle.trad",
+      "items": [
+        {
+          "title": "title.gegants",
+          "image": "assets/images/gegants.jpeg",
+          "shortDescription": "shortdesc.gegants",
+          "longDescription": "longdesc.gegants",
+          "location": "Avinguda de Vidreres",
+          "url": "https://www.lloret.cat/ca/seccions/festes-tradicions/identitat-i-tradicions/els-gegants-de-lloret"
+        },
+        {
+          "title": "title.cristina",
+          "image": "assets/images/santacristina.jpg",
+          "shortDescription": "shortdesc.cristina",
+          "longDescription": "longdesc.cristina",
+          "date": "date.cristina",
+          "url": "https://www.lloret.cat/ca/seccions/festes-tradicions/festes-majors/festa-major-de-santa-cristina"
+        },
+        {
+          "title": "title.pere",
+          "image": "assets/images/santpere.jpg",
+          "shortDescription": "shortdesc.pere",
+          "longDescription": "longdesc.pere",
+          "location": "Paratge Sant Pere del Bosc",
+          "url": "https://patrimoni.lloret.cat/en/moll-open-museum-of-lloret/sant-pere-del-bosc"
+        },
+        {
+          "title": "title.roma",
+          "image": "assets/images/santroma.jpeg",
+          "shortDescription": "shortdesc.roma",
+          "longDescription": "longdesc.roma",
+          "date": "date.roma",
+          "url": "https://www.lloret.cat/ca/seccions/festes-tradicions/festes-majors/festa-major-de-sant-roma"
+        }
+      ]
+    }
+  ]
+}

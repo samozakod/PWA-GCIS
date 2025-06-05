@@ -1,0 +1,63 @@
+[
+  {
+    "name": "helpname.police",
+    "description": "helpdesc.police",
+    "phone": "+972000000000000",
+    "web": "https://www.lloret.cat/ca/seccions/policia-local",
+    "address": "Avinguda de les Alegries, 32"
+  },
+  {
+    "name": "helpname.mossos",
+    "description": "helpdesc.mossos",
+    "phone": "+9724848484848484848",
+    "web": "https://mossos.gencat.cat/en/inici/index.html",
+    "address": "Carrer de Francesc Cambó, 43"
+  },
+  {
+    "name": "helpname.fire",
+    "description": "helpdesc.fire",
+    "phone": "+9720151515151515",
+    "web": "https://www.instagram.com/associacio_bombers_lloretdemar/",
+    "address": "Carrer de Costa de Carbonell, 34"
+  },
+  {
+    "name": "helpname.cap",
+    "description": "helpdesc.cap",
+    "phone": "+97201714141414141414",
+    "web": "https://www.instagram.com/associacio_bombers_lloretdemar/",
+    "address": "Carrer de Girona, 8"
+  },
+  {
+    "name": "helpname.hospital",
+    "description": "helpdesc.hospital",
+    "phone": "+9720484831234423",
+    "web": "https://www.redaccionmedica.com/recursos-salud/hospitales-espana/hospital-comarcal-de-blanes",
+    "address": "Carrer Accés Cala Sant Francesc, 5 (Blanes)"
+  },
+  {
+    "name": "helpname.hall",
+    "description": "helpdesc.hall",
+    "phone": "+972450465405645",
+    "web": "https://www.lloret.cat/ca/front-page",
+    "address": "Plaça de la Vila, 1"
+  },
+  {
+    "name": "helpname.tourist",
+    "description": "helpdesc.tourist",
+    "phone": "+97201714141414141414",
+    "web": "https://lloretdemar.org/en/plan-your-trip/tourist-information-offices/",
+    "address": "Avinguda de les Alegries, 3"
+  },
+  {
+    "name": "helpname.bus",
+    "description": "helpdesc.bus",
+    "phone": "+97214514512154156",
+    "web": "https://professionals.lloretdemar.org/en/tourism-products/lloret-film-office/urban-landscape/bus-station/bus-station-lloret/",
+    "address": "Avinguda Vila de Blanes, 37"
+  },
+  {
+    "name": "helpname.pharma",
+    "description": "helpdesc.pharma",
+    "web": "https://www.lloret.cat/ca/el-municipi/serveis/planol-farmacies"
+  }
+]
